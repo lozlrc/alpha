@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Generated backtest artifacts — all reproducible via run_all.py
+*.png
+**/leaderboard.csv
+**/equity_returns.csv
+**/portfolio_equity_returns.csv
+leaderboard_all.csv
+
+# OS / editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/

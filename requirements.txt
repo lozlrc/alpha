@@ -1,0 +1,16 @@
+# Alpha backtest suite — offline, synthetic-data only (no live market / broker).
+# Built and tested on CPython 3.12 (the repo's .venv was created with: uv venv --python 3.12).
+#
+#   uv venv .venv --python 3.12
+#   uv pip install --python .venv/bin/python -r requirements.txt
+#
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+statsmodels>=0.14
+scikit-learn>=1.5
+matplotlib>=3.8
+
+# Optional: only needed if you swap the synthetic data layer for real historical
+# prices via core.data.load_yfinance(...). Historical download, NOT a live feed.
+# yfinance>=0.2
