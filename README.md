@@ -313,6 +313,16 @@ leakage that survives the jump to real data exactly as it does in `07`. *That ga
 point:* planted structure is generous, real markets are competitive, and a high backtest
 Sharpe is worthless until you've ruled out leakage and costs.
 
+**"Can't you just optimize the parameters?"** `10_real_data/optimize.py` answers it the
+honest way: tune each strategy on a **train** slice (2010–2017), then report the
+**out-of-sample** Sharpe on held-out **2018–2024**. Even *snooping* — grid-searching the
+whole history and reporting the max — averages only **−0.08**, and the honest OOS average
+is **−0.18**; nothing beats SPY (+0.76). The one setting that improves OOS is **rebalancing
+less often** (e.g. monthly momentum −0.07 → +0.14) — a real turnover/cost saving, not a
+discovered signal. You can't optimize your way out of no-alpha; you only fit noise. (To
+actually *find* edge you change the inputs, not the knobs: a broader small/mid-cap universe
+where factors live, or genuinely new data — fundamentals, events, alt-data.)
+
 **What price data alone can't reach** (the script prints this as a coverage matrix):
 
 | family | needs real data of type |
