@@ -11,6 +11,7 @@ statsmodels>=0.14
 scikit-learn>=1.5
 matplotlib>=3.8
 
-# Optional: only needed if you swap the synthetic data layer for real historical
-# prices via core.data.load_yfinance(...). Historical download, NOT a live feed.
+# Optional: only for the real-data demo (10_real_data/) and core.data.load_yfinance(...).
+# One-time HISTORICAL download, cached to disk -- NOT a live feed. The rest of the
+# suite runs fully offline without it; 10_real_data/ skips cleanly if it's absent.
 # yfinance>=0.2

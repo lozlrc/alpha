@@ -16,6 +16,10 @@ __pycache__/
 **/portfolio_equity_returns.csv
 leaderboard_all.csv
 
+# Downloaded real-market data cache (one-time historical fetch; not redistributed)
+data_cache/
+**/data_cache/
+
 # OS / editor cruft
 .DS_Store
 *.swp

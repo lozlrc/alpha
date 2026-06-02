@@ -164,34 +164,108 @@ def generate_market(n_assets: int = 120, n_days: int = 1750, seed: int = 7,
 
 
 # --------------------------------------------------------------------------
-# Real-data hooks (optional). The whole suite runs offline without these;
-# they exist so you can swap in real prices without touching strategy code.
+# Real-data hooks (optional). The whole suite runs offline without these; they
+# let you swap in REAL HISTORICAL prices without touching any strategy code.
+#
+# This is HISTORICAL data only -- a one-time download cached to disk -- NOT a
+# live feed, broker, or order-routing connection. The cached files make every
+# rerun fully offline. Only PRICE-based strategies (momentum, reversal, low-vol,
+# pairs/stat-arb) run on price data alone; factors that need point-in-time
+# fundamentals, earnings dates, sectors, or news must have those supplied too.
+#
+# Honesty caveats for real backtests (the engine can't fix these for you):
+#   * SURVIVORSHIP BIAS -- a hand-picked ticker list is the names that *survived*;
+#     a true point-in-time index membership would include the delisted ones.
+#   * Splits/dividends -- use ADJUSTED closes (yfinance auto_adjust=True does this).
+#   * Point-in-time fundamentals -- never use restated/as-of-today fundamentals.
 # --------------------------------------------------------------------------
-def load_csv(prices_csv: str, **kwargs) -> MarketData:
-    """Build a (prices/returns-only) MarketData from a wide CSV of close prices
-    (index = dates, columns = tickers). Fundamentals/sectors left empty; only
-    price-based strategies will work unless you populate them."""
-    prices = pd.read_csv(prices_csv, index_col=0, parse_dates=True).sort_index()
-    returns = prices.pct_change(fill_method=None)
-    empty = pd.DataFrame(index=prices.index, columns=prices.columns, dtype=float)
-    return MarketData(prices=prices, returns=returns, volume=empty.copy(),
-                      market=returns.mean(axis=1).rename("market"),
-                      sectors=pd.Series("Unknown", index=prices.columns),
-                      betas=pd.Series(1.0, index=prices.columns),
-                      fundamentals={}, meta={"source": prices_csv})
+def _assemble_market(close: pd.DataFrame, volume: pd.DataFrame | None = None, *,
+                     market_ticker: str | None = None,
+                     sectors: dict | None = None, meta: dict | None = None) -> MarketData:
+    """Turn a wide (dates x tickers) ADJUSTED-close frame (+ optional volume) into
+    the same ``MarketData`` bundle the synthetic generator returns, so every
+    price-based family runs unchanged. If ``market_ticker`` is a column it becomes
+    the market factor and is dropped from the tradeable universe; otherwise the
+    equal-weight cross-section is used. Betas are full-sample (a static reference)."""
+    close = close.sort_index()
+    market_ret = None
+    if market_ticker and market_ticker in close.columns:
+        market_ret = close[market_ticker].pct_change(fill_method=None).rename("market")
+        close = close.drop(columns=[market_ticker])
+        if volume is not None:
+            volume = volume.drop(columns=[market_ticker], errors="ignore")
+
+    keep = close.columns[close.notna().mean() > 0.8]          # drop thin/short histories
+    close = close[list(keep)].ffill(limit=5).dropna(how="all")
+    returns = close.pct_change(fill_method=None)
+    if market_ret is None:
+        market_ret = returns.mean(axis=1).rename("market")
+    market_ret = market_ret.reindex(close.index)
+
+    mvar = float(market_ret.var())
+    betas = returns.apply(lambda c: (c.cov(market_ret) / mvar) if mvar > 0 else 1.0)
+    sect = pd.Series({t: (sectors or {}).get(t, "Unknown") for t in close.columns}, name="sector")
+    if volume is None:
+        volume = pd.DataFrame(0.0, index=close.index, columns=close.columns)
+    else:
+        volume = volume.reindex(index=close.index, columns=close.columns).fillna(0.0)
+
+    return MarketData(prices=close, returns=returns, volume=volume,
+                      market=market_ret, sectors=sect,
+                      betas=betas.astype(float), fundamentals={}, meta=meta or {})
 
 
-def load_yfinance(tickers, start="2015-01-01", end=None) -> MarketData:
-    """Download daily closes via yfinance (requires `pip install yfinance` and
-    network access). Provided for convenience -- this is historical data only,
-    NOT a live/broker connection."""
-    import yfinance as yf  # lazy import; optional dependency
-    raw = yf.download(list(tickers), start=start, end=end, auto_adjust=True, progress=False)
-    prices = raw["Close"].dropna(how="all")
-    returns = prices.pct_change(fill_method=None)
-    empty = pd.DataFrame(index=prices.index, columns=prices.columns, dtype=float)
-    return MarketData(prices=prices, returns=returns, volume=empty.copy(),
-                      market=returns.mean(axis=1).rename("market"),
-                      sectors=pd.Series("Unknown", index=prices.columns),
-                      betas=pd.Series(1.0, index=prices.columns),
-                      fundamentals={}, meta={"source": "yfinance"})
+def load_csv(prices_csv: str, volume_csv: str | None = None, *,
+             market_ticker: str | None = None, sectors: dict | None = None) -> MarketData:
+    """Build a MarketData from a wide CSV of ADJUSTED close prices (index = dates,
+    columns = tickers), optionally with a matching volume CSV. Fundamentals are
+    left empty, so only price-based strategies run unless you populate them."""
+    close = pd.read_csv(prices_csv, index_col=0, parse_dates=True).sort_index()
+    volume = (pd.read_csv(volume_csv, index_col=0, parse_dates=True).sort_index()
+              if volume_csv else None)
+    return _assemble_market(close, volume, market_ticker=market_ticker, sectors=sectors,
+                            meta={"source": prices_csv})
+
+
+def load_yfinance(tickers, start: str = "2010-01-01", end: str | None = None, *,
+                  market_ticker: str | None = None, sectors: dict | None = None,
+                  cache_dir: str | None = None, force: bool = False) -> MarketData:
+    """Download daily ADJUSTED OHLCV via yfinance and return a ``MarketData``.
+
+    HISTORICAL download only (not a live/broker feed). With ``cache_dir`` set the
+    result is cached to CSV on first call, so every later run is fully OFFLINE.
+    ``market_ticker`` (e.g. ``"SPY"``) is downloaded as the market factor and
+    excluded from the tradeable universe. Requires ``pip install yfinance``."""
+    import hashlib
+    import os
+
+    tickers = list(dict.fromkeys(tickers))                    # de-dup, keep order
+    dl = tickers + ([market_ticker] if market_ticker and market_ticker not in tickers else [])
+    close = volume = None
+
+    if cache_dir:
+        os.makedirs(cache_dir, exist_ok=True)
+        key = hashlib.md5(f"{sorted(dl)}|{start}|{end}".encode()).hexdigest()[:10]
+        px_path = os.path.join(cache_dir, f"px_{key}.csv")
+        vol_path = os.path.join(cache_dir, f"vol_{key}.csv")
+        if not force and os.path.exists(px_path) and os.path.exists(vol_path):
+            close = pd.read_csv(px_path, index_col=0, parse_dates=True)
+            volume = pd.read_csv(vol_path, index_col=0, parse_dates=True)
+
+    if close is None:
+        import yfinance as yf  # lazy import; optional dependency
+        raw = yf.download(dl, start=start, end=end, auto_adjust=True,
+                          progress=False, threads=False)
+        if raw is None or len(raw) == 0:
+            raise RuntimeError("yfinance returned no data (offline, rate-limited, or bad tickers).")
+        fields = raw.columns.get_level_values(0)
+        close = raw["Close"].copy()
+        volume = raw["Volume"].copy() if "Volume" in fields else None
+        close = close.dropna(how="all")
+        if cache_dir:
+            close.to_csv(px_path)
+            (volume if volume is not None else pd.DataFrame(index=close.index)).to_csv(vol_path)
+
+    return _assemble_market(close, volume, market_ticker=market_ticker, sectors=sectors,
+                            meta={"source": "yfinance", "start": start, "end": end,
+                                  "n_requested": len(tickers)})
