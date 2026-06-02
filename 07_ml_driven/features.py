@@ -62,10 +62,13 @@ def compute_features(md: "core.MarketData") -> dict[str, pd.DataFrame]:
     feats["mom_252_21"] = p.shift(21) / p.shift(252) - 1.0
     # --- short-term reversal: recent losers tend to bounce -> negate ---
     feats["rev_5"] = -(p / p.shift(5) - 1.0)
-    # --- value / quality (lagged, as-reported fundamentals) ---
-    feats["book_to_price"] = md.book_to_price()
-    feats["earnings_yield"] = md.earnings_yield()
-    feats["profitability"] = md.fundamentals["profitability"]
+    # --- value / quality (lagged, as-reported fundamentals) -- ONLY if present.
+    #     Real price feeds carry no fundamentals, so these are skipped there and the
+    #     model trains on the price/volume features alone (see 10_real_data). ---
+    if md.fundamentals:
+        feats["book_to_price"] = md.book_to_price()
+        feats["earnings_yield"] = md.earnings_yield()
+        feats["profitability"] = md.fundamentals["profitability"]
     # --- realized volatility (low-vol anomaly: model can sign it) ---
     feats["vol_21"] = r.rolling(21).std()
     feats["vol_63"] = r.rolling(63).std()
@@ -100,11 +103,12 @@ def build_panel(md: "core.MarketData", horizon: int = H) -> pd.DataFrame:
     Rows with any missing feature or a missing label are dropped.
     """
     feats = compute_features(md)
+    names = [n for n in FEATURE_NAMES if n in feats]   # available features, canonical order
     # Cross-sectional z-score (per date) keeps features on a common scale and
     # makes the signal naturally rank-based / dollar-neutral friendly.
-    cols = {name: _stack(core.zscore(feats[name], axis=1), name) for name in FEATURE_NAMES}
+    cols = {name: _stack(core.zscore(feats[name], axis=1), name) for name in names}
     label = _stack(forward_return(md, horizon), "fwd_ret")
 
     panel = pd.concat(list(cols.values()) + [label], axis=1)
-    panel = panel.dropna(subset=FEATURE_NAMES + ["fwd_ret"])
+    panel = panel.dropna(subset=names + ["fwd_ret"])
     return panel.sort_index()

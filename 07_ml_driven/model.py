@@ -14,7 +14,12 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
 
-from features import FEATURE_NAMES
+
+def _feature_cols(panel: pd.DataFrame) -> list[str]:
+    """Feature columns = every column except the forward-return label. Inferred from
+    the panel so the model adapts to whatever features exist (all 11 on synthetic
+    data; the 8 price/volume ones on a real price feed, which has no fundamentals)."""
+    return [c for c in panel.columns if c != "fwd_ret"]
 
 
 def make_model(random_state: int = 0) -> HistGradientBoostingRegressor:
@@ -38,8 +43,9 @@ def make_model(random_state: int = 0) -> HistGradientBoostingRegressor:
 
 
 def fit_model(train: pd.DataFrame, random_state: int = 0) -> HistGradientBoostingRegressor:
-    """Fit on a tidy panel slice (must contain FEATURE_NAMES + ``fwd_ret``)."""
-    X = train[FEATURE_NAMES].to_numpy()
+    """Fit on a tidy panel slice (feature columns + ``fwd_ret``)."""
+    feats = _feature_cols(train)
+    X = train[feats].to_numpy()
     y = train["fwd_ret"].to_numpy()
     model = make_model(random_state=random_state)
     model.fit(X, y)
@@ -48,7 +54,7 @@ def fit_model(train: pd.DataFrame, random_state: int = 0) -> HistGradientBoostin
 
 def predict(model: HistGradientBoostingRegressor, panel: pd.DataFrame) -> pd.Series:
     """Predict forward returns for a panel slice; returns a (date,ticker) Series."""
-    X = panel[FEATURE_NAMES].to_numpy()
+    X = panel[_feature_cols(panel)].to_numpy()
     preds = model.predict(X)
     return pd.Series(preds, index=panel.index, name="pred")
 

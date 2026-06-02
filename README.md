@@ -57,7 +57,7 @@ alpha/
 ├── 07_ml_driven/                  gradient boosting + purged/embargoed CV
 ├── 08_portfolio/                  combines the alphas into one risk-managed book
 ├── 09_agentic_flow/               trade the crowded flow of homogeneous AI agents
-├── 10_real_data/                  honesty check: the price factors on REAL prices (cached)
+├── 10_real_data/                  honesty check: 01/02/07 strategies on REAL prices (cached)
 │
 ├── run_all.py                     master driver  →  leaderboard_all.csv
 ├── requirements.txt
@@ -285,36 +285,47 @@ the book. Outputs: `portfolio_equity.png`, `correlation.png`, `leaderboard.csv`.
 
 ## Real data — the honesty check (`10_real_data`)
 
-The synthetic generator sits behind one interface, so the whole suite can point at **real
-historical prices** without touching strategy code. `10_real_data/run.py` does exactly
-that: it downloads daily *adjusted* prices for a fixed large-cap universe (one time, cached
-to `data_cache/` → fully offline afterwards; historical data, **not** a live feed), then
-runs the **same** price-factor code from `01` on real prices.
+The synthetic generator sits behind one interface, so the suite can point at **real
+historical prices** without touching strategy code. `10_real_data/run.py` downloads daily
+*adjusted* prices for a fixed ~62-name large-cap universe (one time, cached to `data_cache/`
+→ fully offline afterwards; historical data, **not** a live feed), then runs the **same
+strategy code** from the synthetic families on real prices — *everything the data supports*:
+**01** price factors, **all four `02`** stat-arb strategies, and the **`07`** ML model.
 
 The result is the whole point of the repo:
 
-| factor (net 5 bps, 2010–2024) | synthetic (planted) | real |
+| strategy (net 5 bps, 2010–2024) | synthetic (suite) | real |
 |---|---:|---:|
-| momentum 12-1 | **+1.16** | **−0.22** |
-| low-vol | +0.18 | −0.38 |
-| short-term reversal | −2.80 | −1.06 |
+| 01 momentum 12-1 | +1.3 | −0.06 |
+| 01 low-vol | +0.3 | −0.19 |
+| 01 short-term reversal | −2.8 | −0.82 |
+| 02 pairs / cointegration | +2.3 / +1.7 | −0.14 / −0.07 |
+| 02 xs-reversal / lead-lag | +1.6 / +1.9 | −0.89 / −1.17 |
+| 07 ML honest-OOS | +2.2 | −0.85 |
+| 07 ML **leaky in-sample** ⚠️ | +7.0 | **+0.97** |
 | *SPY buy-and-hold (reference)* | — | *+0.84* |
 
-Same machinery, only the data changed — the textbook factors that "work" on planted
-structure go flat-to-negative on real large-caps net of costs, and **just holding the
-market beat every dollar-neutral factor**. (That's honest, not a bug: cross-sectional
-factors in a ~34-name mega-cap universe, net of turnover, are a hard place to find alpha.)
-This is why every synthetic Sharpe here demonstrates *mechanics*, never a forward-looking
-return estimate.
+Same code, only the data changed — and **every dollar-neutral factor, stat-arb, and ML
+signal is flat-to-negative on real large-caps net of costs.** Just holding SPY (0.84) beat
+all of them. The *only* thing above SPY is the **leaky in-sample ML (+0.97) — which is the
+look-ahead trap**: its honest purged-OOS twin is **−0.85**, a +1.8-Sharpe mirage of pure
+leakage that survives the jump to real data exactly as it does in `07`. *That gap is the
+point:* planted structure is generous, real markets are competitive, and a high backtest
+Sharpe is worthless until you've ruled out leakage and costs.
 
-Loaders (each returns the same `MarketData` the synthetic generator does, so every
-price-based family runs unchanged):
-- `core.data.load_yfinance(tickers, start, end, market_ticker="SPY", cache_dir=…)` — a
-  one-time historical download, cached (needs the optional `yfinance`).
-- `core.data.load_csv(prices_csv, volume_csv=…)` — your own adjusted-price files.
+**What price data alone can't reach** (the script prints this as a coverage matrix):
 
-**What real *prices* alone can't reach:** value/quality (point-in-time fundamentals),
-events (`04`), alt-data (`05`), microstructure (`03`), and `09_agentic_flow` (a hypothesis
-simulator — validate via the proxies above). And two traps the engine can't fix for you:
-**survivorship bias** (a surviving-names list overstates returns) and **point-in-time**
-fundamentals (never use restated data).
+| family | needs real data of type |
+|---|---|
+| 01 value / quality | point-in-time fundamentals (book, earnings, ROE) |
+| 03 microstructure | tick / limit-order-book (bid-ask, order flow) |
+| 04 event-driven | earnings / index-rebalance / M&A calendars |
+| 05 alternative data | news, sentiment, web-traffic feeds |
+| 06 cross-asset vol | options / implied-vol surfaces |
+| 09 agentic flow | no real agent-flow labels — a simulator; proxy-test only |
+
+Loaders (each returns the same `MarketData` the synthetic generator does):
+`core.data.load_yfinance(tickers, start, end, market_ticker="SPY", cache_dir=…)` (one-time
+cached download; needs the optional `yfinance`) and `core.data.load_csv(prices_csv,
+volume_csv=…)`. Two traps the engine can't fix for you: **survivorship bias** (a
+surviving-names list overstates returns) and **point-in-time** fundamentals (never restated).
