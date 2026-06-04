@@ -58,6 +58,7 @@ alpha/
 ├── 08_portfolio/                  combines the alphas into one risk-managed book
 ├── 09_agentic_flow/               trade the crowded flow of homogeneous AI agents
 ├── 10_real_data/                  honesty check: 01/02/07 strategies on REAL prices (cached)
+├── 11_tactical_allocation/        real high-Sharpe, low-drawdown multi-asset TAA (cached)
 │
 ├── run_all.py                     master driver  →  leaderboard_all.csv
 ├── requirements.txt
@@ -339,3 +340,43 @@ Loaders (each returns the same `MarketData` the synthetic generator does):
 cached download; needs the optional `yfinance`) and `core.data.load_csv(prices_csv,
 volume_csv=…)`. Two traps the engine can't fix for you: **survivorship bias** (a
 surviving-names list overstates returns) and **point-in-time** fundamentals (never restated).
+
+---
+
+## Where real risk-adjusted return actually lives (`11_tactical_allocation`)
+
+If naive equity factors net of costs are a dead end, where does *real* high-Sharpe,
+low-drawdown return come from? **Diversification, trend-following, and risk management** —
+the most robust, best-documented effects in finance. `11_tactical_allocation` builds them
+into one portfolio on **14 real ETFs** (US large/small cap, intl & EM equity, Treasuries
+across the curve, TIPS, IG & high-yield credit, gold, silver, commodities, REITs;
+**2007–2024**, so the GFC, COVID, and 2022 are all in the test). Idle cash earns the T-bill
+yield (BIL). Three *a-priori, literature-standard* rules — not parameters fit to the data:
+
+1. **Trend** — hold each asset only while it's above an *ensemble* of 8/10/12-month moving
+   averages (Faber / time-series momentum); exposure scales with trend strength.
+2. **Risk parity** — size each sleeve by inverse volatility.
+3. **Vol target** — scale toward ~10% annual vol, capped at 1× (no leverage); the rest is cash.
+
+| 2007–2024, net 10 bps | Sharpe | ann vol | **max drawdown** | Calmar |
+|---|---:|---:|---:|---:|
+| **Tactical allocation** | **1.00** | 3.0% | **−6.2%** | **0.48** |
+| 60/40 (SPY/IEF) | 0.74 | 11.3% | −31.4% | 0.26 |
+| SPY buy-and-hold | 0.60 | 19.8% | −55.2% | 0.19 |
+
+**+0.40 Sharpe over SPY, an 89% shallower drawdown (−6.2% vs −55%), and 2.6× the Calmar** —
+and **robust, not a knife-edge**: Sharpe holds **0.97–1.00** and max-DD **−6.1% to −6.2%**
+across *every* lookback/vol-target setting in the sweep `run.py` prints. The drawdown panel of
+`equity.png` is the story: in 2008 SPY falls 55% while the tactical book barely dips. Two
+things that genuinely helped (neither is curve-fitting): **breadth** (9 → 14 diversifying
+sleeves lifted Sharpe 0.88 → 1.00 and cut drawdown 9.5% → 6.2%) and the **ensemble trend**
+filter. *Long/short trend was tested and was worse* (≈0.5 Sharpe — shorting whipsaws in a
+mostly-rising tape), so the book stays long-only-to-cash.
+
+**Honest framing:** this is long-only **alternative beta** (harvesting diversification + a
+trend premium), *not* market-neutral alpha, and it's **unlevered** (3% vol) — so it trades raw
+return for safety; lever it to taste and the *Sharpe/drawdown shape* is what travels (≈3× →
+~9% return, ~−18% DD, same ~1.0 Sharpe — still a third of SPY's drawdown). It's a backtest on
+survivor ETFs net of a flat cost, with no impact model. But unlike the equity factors, the
+edge is **structural and robust** — which is exactly why it survives where threshold-tuning
+didn't. *That* is the difference between finding alpha and fitting noise.
