@@ -4,7 +4,7 @@ A self-contained research suite in **sixteen numbered modules**: eight synthetic
 families with deliberately planted structure (including a forward-looking one that trades
 the *behavior of other AI trading agents*), five **real-data studies** (large-cap price
 factors, multi-asset ETF allocation, crypto funding carry, overnight open/close gaps, a
-10-coin carry stack), two **research engines** (a factor miner 因子挖掘 with
+10-coin carry stack), two **research engines** (a factor miner with
 multiple-testing discipline, and a walk-forward improvement loop with a trials ledger),
 and a portfolio layer that combines the synthetic alphas into one risk-managed book.
 
@@ -67,7 +67,7 @@ alpha/
 ├── 11_tactical_allocation/        real high-Sharpe, low-drawdown multi-asset TAA (cached)
 ├── 12_funding_carry/              real crypto perp funding carry — structural, delta-neutral (cached)
 ├── 13_overnight_news/             can you trade overnight news at the open? + forward-only LLM harness
-├── 14_factor_mining/              factor-mining engine (因子挖掘) + multiple-testing discipline
+├── 14_factor_mining/              factor-mining engine + multiple-testing discipline
 ├── 15_improvement_loop/           walk-forward re-tuning loop with a trials ledger (runs on 11/12/13)
 ├── 16_carry_stack/                breadth on the structural edge: 10-coin funding-carry book
 │
@@ -501,10 +501,10 @@ discipline**, and the run prints it as a single exhibit:
 | the #1 pick, `ts_delta(illiq,63)`: train t **−4.2** (beats even Bonferroni) → OOS t | **−0.2**, book Sharpe **−3.0** |
 
 Mine 205 strategies and the best one *looks* like a discovery **by construction** — the
-scatter (`equity.png`) shows the whole cloud. The **classics (经典因子)** run through the
-*same* evaluator as the mined noise: momentum 12-1 (动量) is the only one whose IC
-survives OOS (t +2.4 — a century of literature showing up in 62 names), 1-month reversal
-(反转), low-vol (低波), Amihud illiquidity and turnover all die — **and even momentum's
+scatter (`equity.png`) shows the whole cloud. The **classics** run through the
+*same* evaluator as the mined noise: momentum 12-1 is the only one whose IC
+survives OOS (t +2.4 — a century of literature showing up in 62 names), 1-month reversal,
+low-vol, Amihud illiquidity and turnover all die — **and even momentum's
 quintile book loses net of costs** (−0.05 Sharpe). Surviving the t-test is necessary,
 not sufficient: **IC ≠ money** — after the statistics come costs, capacity, and crowding.
 

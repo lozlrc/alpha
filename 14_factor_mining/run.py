@@ -1,4 +1,4 @@
-"""A factor-mining engine (因子挖掘) with the discipline that makes it honest.
+"""A factor-mining engine with the discipline that makes it honest.
 
 Run:  ../.venv/bin/python run.py
 
@@ -18,7 +18,7 @@ This family builds both halves on the REAL 62-name panel (2010-2024):
   2. THE DISCIPLINE -- every candidate is re-scored OOS (2018-2024) untouched;
      the report prints the noise bar E[max|t|] ~ sqrt(2 ln N) next to the naive
      |t|>2 bar, and the train-vs-test scatter that shows the mirage directly.
-  3. THE CLASSICS (经典因子) -- momentum 12-1, 1-month reversal (反转), low-vol,
+  3. THE CLASSICS -- momentum 12-1, 1-month reversal, low-vol,
      Amihud illiquidity, turnover -- run through the SAME evaluator, so mined
      noise and published anomalies face identical scoring. (Value/quality/PEAD
      need fundamentals/events this panel doesn't have -- see 10's coverage matrix.)
@@ -171,11 +171,11 @@ def main():
 
     # ---- the classics through the same evaluator ---------------------------
     classics = {
-        "mom_12_1  (动量)": px.shift(21) / px.shift(252) - 1.0,
-        "reversal_1m (反转)": -(px / px.shift(21) - 1.0),
-        "low_vol   (低波)": -r.rolling(63).std(),
-        "amihud_illiq (非流动性)": (r.abs() / (px * v)).rolling(21).mean(),
-        "low_turnover (低换手)": -(v / v.rolling(63).mean()).rolling(21).mean(),
+        "mom_12_1": px.shift(21) / px.shift(252) - 1.0,
+        "reversal_1m": -(px / px.shift(21) - 1.0),
+        "low_vol": -r.rolling(63).std(),
+        "amihud_illiq": (r.abs() / (px * v)).rolling(21).mean(),
+        "low_turnover": -(v / v.rolling(63).mean()).rolling(21).mean(),
     }
     print("\nClassic factors, same scoring (daily rank-IC vs next-day return):")
     print(f"  {'factor':<24s} {'train IC':>9s} {'t':>6s} {'test IC':>9s} {'t':>6s}")
@@ -230,9 +230,9 @@ def main():
     top_sig = top.sig * np.sign(top.ic_tr)      # trade it the way train said to
     streams = {
         f"mined_best [{top.expr[:28]}]": ls_book(top_sig.loc[~is_train], r_test, "mined"),
-        "mom_12_1": ls_book(classics["mom_12_1  (动量)"].loc[~is_train], r_test, "mom"),
-        "reversal_1m": ls_book(classics["reversal_1m (反转)"].loc[~is_train], r_test, "rev"),
-        "low_vol": ls_book(classics["low_vol   (低波)"].loc[~is_train], r_test, "lv"),
+        "mom_12_1": ls_book(classics["mom_12_1"].loc[~is_train], r_test, "mom"),
+        "reversal_1m": ls_book(classics["reversal_1m"].loc[~is_train], r_test, "rev"),
+        "low_vol": ls_book(classics["low_vol"].loc[~is_train], r_test, "lv"),
     }
     rows = [core.metrics.summary(s.dropna(), n) for n, s in streams.items()]
     board = core.format_leaderboard(rows)
