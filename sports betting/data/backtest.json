@@ -1,0 +1,36 @@
+{
+ "folds": 400,
+ "coverage": 0.4629171383316945,
+ "all_mean_skill": 0.01661781550684639,
+ "sel_mean_skill": 0.006875006340457833,
+ "uplift": -0.009742809166388557,
+ "uplift_std": 0.011978573681090043,
+ "winrate": 0.1775,
+ "deployable_set": [
+  "btts_compound",
+  "corners",
+  "fouls",
+  "player_sot",
+  "sot",
+  "team_scores"
+ ],
+ "sel_qsharpe": 0.17821281622610496,
+ "all_qsharpe": 0.1236234951073915,
+ "pick_freq": {
+  "team_scores": 0.695,
+  "total_goals": 0.63,
+  "fouls": 0.975,
+  "corners": 0.8775,
+  "both_sot": 0.4825,
+  "btts_compound": 0.5125,
+  "sot": 0.51,
+  "pen_or_red": 0.21,
+  "offsides": 0.3,
+  "player_sot": 0.625,
+  "result": 0.5125,
+  "player_involve": 0.31,
+  "ht_winning": 0.125,
+  "half_vs_half_goals": 0.1425,
+  "cards": 0.065
+ }
+}

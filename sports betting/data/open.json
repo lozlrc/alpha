@@ -1,0 +1,2030 @@
+[
+ {
+  "market_id": "4e2fd55d-652b-4fb5-9375-31e382bada1c",
+  "family": "sot",
+  "question": "Will Austria have more shots on target than Algeria in the second half?",
+  "prob": 37
+ },
+ {
+  "market_id": "db40a747-94d5-4120-9399-19b8a549c95e",
+  "family": "sot",
+  "question": "Will Argentina have 6 or more shots on target?",
+  "prob": 37
+ },
+ {
+  "market_id": "265b0dde-79a3-477b-a989-e86a1bf2b530",
+  "family": "player_involve",
+  "question": "Will Mousa Al-Taamari score or assist a goal (excluding own goals)?",
+  "prob": 33
+ },
+ {
+  "market_id": "3d98c4bc-7429-44d1-ba22-f94b9e89a24f",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 43
+ },
+ {
+  "market_id": "d246bfc5-f14e-4de2-939f-27d25176efec",
+  "family": "team_scores",
+  "question": "Will Jordan score in the second half?",
+  "prob": 22
+ },
+ {
+  "market_id": "ddb88604-c5b2-41e4-b54c-3a6251ca225a",
+  "family": "sot",
+  "question": "Will Algeria have 3 or more shots on target?",
+  "prob": 68
+ },
+ {
+  "market_id": "0689d420-b2dc-4ad5-bcf7-4f62a43ae956",
+  "family": "player_sot",
+  "question": "Will Marcel Sabitzer have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "a42becae-4a32-411a-904a-813bb1a2af6b",
+  "family": "sot",
+  "question": "Will Austria have 5 or more shots on target?",
+  "prob": 38
+ },
+ {
+  "market_id": "65e32b43-e8cc-4a03-9e13-378ab6b950b6",
+  "family": "corners",
+  "question": "Will there be 9 or more total corner kicks?",
+  "prob": 50
+ },
+ {
+  "market_id": "3d4d7f4a-ad8a-43f4-a5a6-f777e18c7c76",
+  "family": "result",
+  "question": "Will Algeria win the match?",
+  "prob": 27
+ },
+ {
+  "market_id": "11105aab-6512-426a-8398-c59c4b8ba8e4",
+  "family": "cards_compare",
+  "question": "Will Austria receive more cards than Algeria?",
+  "prob": 34
+ },
+ {
+  "market_id": "37f1e3ff-3bb5-41e3-b1d3-cf9bf02eefa0",
+  "family": "goals_compare_half",
+  "question": "Will Austria score more goals than Algeria in the second half?",
+  "prob": 30
+ },
+ {
+  "market_id": "e7e494aa-0978-4c61-a66e-91876ab893cb",
+  "family": "first_goal_2h",
+  "question": "Will Austria score the first goal of the second half?",
+  "prob": 25
+ },
+ {
+  "market_id": "89051d35-6048-480e-a2f7-925ac9346337",
+  "family": "fouls",
+  "question": "Will Algeria commit more fouls than Austria?",
+  "prob": 42
+ },
+ {
+  "market_id": "7e371206-e93a-437d-9a4a-a5451e44012e",
+  "family": "player_goalscorer",
+  "question": "Will Luis D\u00edaz score a goal (excluding own goals)?",
+  "prob": 36
+ },
+ {
+  "market_id": "c5fada39-248b-4118-ae3e-4e6af345fa96",
+  "family": "corners",
+  "question": "Will there be 5 or more total corner kicks in the second half?",
+  "prob": 47
+ },
+ {
+  "market_id": "c703d31f-77ab-4190-8666-7b334aa1bec8",
+  "family": "sot",
+  "question": "Will Portugal have 4 or more shots on target?",
+  "prob": 57
+ },
+ {
+  "market_id": "eb47fe91-b920-4acf-9c5a-1009ed7cb33a",
+  "family": "sot",
+  "question": "Will Colombia have 4 or more shots on target?",
+  "prob": 48
+ },
+ {
+  "market_id": "9abcb31a-2213-49d2-a515-43b9cc9a71ab",
+  "family": "result",
+  "question": "Will Colombia win the match?",
+  "prob": 24
+ },
+ {
+  "market_id": "3b9f27bf-b9ca-4604-9112-ef8e99dfbe36",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 35
+ },
+ {
+  "market_id": "de87022c-d94b-41cc-84c9-096f933d5929",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "c48e143a-ce01-4977-9b79-98077a2e04bc",
+  "family": "sot",
+  "question": "In the second half, will Colombia have more shots on target than Portugal?",
+  "prob": 31
+ },
+ {
+  "market_id": "9f7c76ed-e5f2-459b-af43-29e03299257b",
+  "family": "offsides",
+  "question": "Will Colombia be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "b7328c17-3a9c-49fe-a9a0-1eceed96a03a",
+  "family": "corners",
+  "question": "Will Uzbekistan have 5 or more corner kicks?",
+  "prob": 39
+ },
+ {
+  "market_id": "f3962b11-d359-4295-8efb-b9a55c574d3b",
+  "family": "player_involve",
+  "question": "Will C\u00e9dric Bakambu score or assist a goal (excluding own goals)?",
+  "prob": 33
+ },
+ {
+  "market_id": "ccbcf840-6275-4403-8791-02c64bdd1893",
+  "family": "sot",
+  "question": "Will there be 4 or more total shots on target in the second half?",
+  "prob": 58
+ },
+ {
+  "market_id": "41bdce13-bfca-4c36-a0bb-12ad94b54db8",
+  "family": "result",
+  "question": "Will DR Congo win the match?",
+  "prob": 37
+ },
+ {
+  "market_id": "cf17a41d-37e3-4979-82aa-81934ce7b121",
+  "family": "player_sot",
+  "question": "Will Eldor Shomurodov have at least 1 shot on target in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "bb825e94-a0a4-4ea9-a7f3-9835ecf3bca8",
+  "family": "sot",
+  "question": "Will Uzbekistan have more shots on target than DR Congo in the second half?",
+  "prob": 32
+ },
+ {
+  "market_id": "3f4a50eb-7a9a-4eba-b913-f3bb14d64ee7",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "2392f003-e56a-4289-a3b1-b07e7de291b2",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 35
+ },
+ {
+  "market_id": "57a0208a-b784-4663-aca6-047aadc0fc4b",
+  "family": "both_sot",
+  "question": "Will both teams have at least 1 shot on target in the second half?",
+  "prob": 71
+ },
+ {
+  "market_id": "2a93e720-962b-43d9-a6de-c595fdf29a0d",
+  "family": "offsides",
+  "question": "Will Uzbekistan be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "0e3f5b26-a800-414a-8c74-d3056ea293c0",
+  "family": "result",
+  "question": "Will Croatia win the match?",
+  "prob": 50
+ },
+ {
+  "market_id": "3555d723-0ef3-4c1a-86c4-b9bccc02d650",
+  "family": "ht_winning",
+  "question": "At halftime, will Croatia be winning?",
+  "prob": 35
+ },
+ {
+  "market_id": "c499a3e6-92f2-4b44-bac2-751ec61acf56",
+  "family": "team_scores",
+  "question": "Will Croatia score in the second half?",
+  "prob": 55
+ },
+ {
+  "market_id": "12f8261f-89b4-4c59-ab7b-4cea700478a1",
+  "family": "fouls",
+  "question": "Will Uzbekistan commit more fouls than DR Congo?",
+  "prob": 43
+ },
+ {
+  "market_id": "6c63350c-f662-44bb-b914-406c60ad3d0c",
+  "family": "player_sot",
+  "question": "Will Harry Kane have at least 1 shot on target?",
+  "prob": 63
+ },
+ {
+  "market_id": "aad59e42-0d36-4261-aa3f-8e95a96fcd47",
+  "family": "player_sot",
+  "question": "Will Jos\u00e9 Fajardo have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "91d86b83-bac0-49dd-ba31-bbde0983c2d2",
+  "family": "corners",
+  "question": "Will there be 5 or more total corner kicks in the second half?",
+  "prob": 47
+ },
+ {
+  "market_id": "b394df3c-cd76-4d91-a9e6-d654162adab2",
+  "family": "total_goals",
+  "question": "Will the match have 3 or more total goals?",
+  "prob": 42
+ },
+ {
+  "market_id": "d793a499-ddd9-4eab-8c07-4be160366653",
+  "family": "ht_tied",
+  "question": "At halftime, will the match be tied?",
+  "prob": 35
+ },
+ {
+  "market_id": "90b29cc0-7b7a-4aed-8703-b91967fe6225",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "b3b81826-7b60-468a-b71e-43838587f0d7",
+  "family": "compound_first_and_2h",
+  "question": "Will Panama score the first goal of the game and England score in the second half?",
+  "prob": 15
+ },
+ {
+  "market_id": "6913dd4d-f020-4955-b562-c9c5458a32f0",
+  "family": "sot",
+  "question": "Will there be 4 or more total shots on target in the second half?",
+  "prob": 58
+ },
+ {
+  "market_id": "97a01954-750b-4bfb-8269-ad7e48dec873",
+  "family": "fouls",
+  "question": "Will Panama commit more fouls than England?",
+  "prob": 56
+ },
+ {
+  "market_id": "00f8764b-b25b-4da2-8b8b-2a0e53eede10",
+  "family": "team_scores",
+  "question": "Will Panama score at least 1 goal?",
+  "prob": 42
+ },
+ {
+  "market_id": "2e61a108-671a-4024-b421-aa67e7b8105d",
+  "family": "player_sot",
+  "question": "Will Antoine Semenyo have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "9c41d950-c256-43af-80db-076ed84dc567",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "66ed62a5-c4f6-4938-9287-e17c2743ca64",
+  "family": "player_sot",
+  "question": "Will Youri Tielemans have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "33e7f75a-cc38-4762-86f1-32fc2fb975cc",
+  "family": "offsides",
+  "question": "Will Ghana be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "84aaece6-6111-4a5a-a77a-a97f9ff13afe",
+  "family": "sot",
+  "question": "Will Belgium have 4 or more shots on target?",
+  "prob": 67
+ },
+ {
+  "market_id": "ee0f2ad4-846e-43ca-8166-01593619dd44",
+  "family": "team_scores",
+  "question": "Will Belgium score in the second half?",
+  "prob": 61
+ },
+ {
+  "market_id": "ae0232d1-b5ec-440f-a0aa-fd816ce7550e",
+  "family": "team_scores",
+  "question": "Will New Zealand score at least 1 goal?",
+  "prob": 37
+ },
+ {
+  "market_id": "eaf3a69b-22c2-43f1-bde5-80dc167fd331",
+  "family": "team_scores",
+  "question": "Will Jordan score at least 1 goal?",
+  "prob": 35
+ },
+ {
+  "market_id": "64167c13-32d0-4b61-bd0b-f54a331f3336",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "36d135a4-2db4-4702-a4f3-e020206a4d9f",
+  "family": "sot",
+  "question": "Will Argentina have more shots on target than Jordan in the second half?",
+  "prob": 52
+ },
+ {
+  "market_id": "e71cc4d9-cfb2-42d6-a795-93c0ca645882",
+  "family": "fouls",
+  "question": "Will Jordan commit more fouls than Argentina?",
+  "prob": 60
+ },
+ {
+  "market_id": "9737e196-a037-4bc7-94c7-6afe9ac69463",
+  "family": "offsides",
+  "question": "Will Jordan be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "89a055ad-c0e0-4d32-81d3-a697e201d01e",
+  "family": "corners",
+  "question": "Will Argentina have at least 1 corner kick in the first half?",
+  "prob": 84
+ },
+ {
+  "market_id": "c52cb04a-6fdc-41ce-be3a-e52331e876e4",
+  "family": "player_sot",
+  "question": "Will Gon\u00e7alo Ramos have at least 1 shot on target?",
+  "prob": 63
+ },
+ {
+  "market_id": "bb1836ef-4d8b-4360-8482-e474be117aec",
+  "family": "player_sot",
+  "question": "Will Luka Su\u010di\u0107 have at least 1 shot on target in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "6a29d849-2b3f-4a64-b2b6-3f034b2a5b2b",
+  "family": "corners",
+  "question": "Will there be 9 or more total corner kicks?",
+  "prob": 50
+ },
+ {
+  "market_id": "43ae8180-e10c-418d-89ab-e5a42e58d702",
+  "family": "sot",
+  "question": "Will Croatia have 6 or more shots on target?",
+  "prob": 31
+ },
+ {
+  "market_id": "58a00fb0-57d2-413b-b7d7-294f6ee24144",
+  "family": "sot",
+  "question": "Will there be 4 or more total shots on target in the second half?",
+  "prob": 58
+ },
+ {
+  "market_id": "4b834c82-fa96-4553-b819-406aa4d84e74",
+  "family": "team_scores",
+  "question": "Will France score in the second half?",
+  "prob": 52
+ },
+ {
+  "market_id": "bb023eb2-d88e-4317-a475-2526f87276c3",
+  "family": "cards_compare",
+  "question": "Will New Zealand receive more cards than Belgium?",
+  "prob": 45
+ },
+ {
+  "market_id": "9eabe9c0-6ec7-4702-8540-04ee755c323c",
+  "family": "sot",
+  "question": "Will New Zealand have 2 or more shots on target in the second half?",
+  "prob": 45
+ },
+ {
+  "market_id": "37014a9f-5ab2-43f5-baa4-6bd2dbc1bd97",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 26
+ },
+ {
+  "market_id": "6c1ae3e9-01e0-436a-b4ee-55bd54171708",
+  "family": "cards",
+  "question": "Will Belgium receive at least 1 card in the second half?",
+  "prob": 63
+ },
+ {
+  "market_id": "9282f983-7e74-48c2-ae92-64d972164a32",
+  "family": "fouls",
+  "question": "Will New Zealand commit more fouls than Belgium?",
+  "prob": 59
+ },
+ {
+  "market_id": "0a58473c-5d91-405d-bc16-cb2de57a9a0c",
+  "family": "both_sot",
+  "question": "At halftime, will both teams have at least 1 shot on target?",
+  "prob": 61
+ },
+ {
+  "market_id": "9b10408f-a5b9-4586-a4d1-ef3269ad60fc",
+  "family": "player_sot",
+  "question": "Will Mehdi Taremi have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "b3442350-1e03-42e0-8310-d83af5f99fdb",
+  "family": "player_sot",
+  "question": "Will Mahmoud Trezeguet have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "6ae1692b-b794-4d64-8862-f7a42865b5d8",
+  "family": "sot",
+  "question": "Will Egypt have 3 or more shots on target?",
+  "prob": 73
+ },
+ {
+  "market_id": "1f08b2aa-1cf4-4f3e-8ac9-a38d13476dd7",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 42
+ },
+ {
+  "market_id": "537c8858-c51b-4f52-976a-d4822594f93b",
+  "family": "total_goals",
+  "question": "Will the second half have 2 or more total goals?",
+  "prob": 37
+ },
+ {
+  "market_id": "b749e570-1132-4c04-ad87-eb084a4f8b2f",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 43
+ },
+ {
+  "market_id": "9d76af0a-07d6-4e3e-83e7-a7fcfcc5f6c0",
+  "family": "result",
+  "question": "Will Egypt win the match?",
+  "prob": 39
+ },
+ {
+  "market_id": "ac02e3c7-ad61-4f98-85bf-c0b8aa80a3be",
+  "family": "corners",
+  "question": "Will Iran finish with more corner kicks than Egypt?",
+  "prob": 32
+ },
+ {
+  "market_id": "b78c46e8-557c-4f5e-98b9-cb0774335119",
+  "family": "sot",
+  "question": "Will Iran have more shots on target than Egypt in the second half?",
+  "prob": 31
+ },
+ {
+  "market_id": "528c633c-2c27-484e-aae2-ffd8bfc11274",
+  "family": "offsides",
+  "question": "Will Iran be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "37561adf-2575-4b0e-946a-3554bf110416",
+  "family": "player_goalscorer",
+  "question": "Will Salem Al-Dawsari score a goal (excluding own goals)?",
+  "prob": 24
+ },
+ {
+  "market_id": "112dde24-c7b1-4f24-98d3-24860e7b9088",
+  "family": "player_involve",
+  "question": "Will Ryan Mendes score or assist a goal (excluding own goals)?",
+  "prob": 33
+ },
+ {
+  "market_id": "ac0602d9-157b-4f67-a473-7838dbef8c9d",
+  "family": "team_scores",
+  "question": "Will Cape Verde score in the second half?",
+  "prob": 44
+ },
+ {
+  "market_id": "1e222611-391d-4b26-af5a-0ef123f62151",
+  "family": "result",
+  "question": "Will Cape Verde win the match?",
+  "prob": 29
+ },
+ {
+  "market_id": "bab6a5eb-1f7f-4185-b833-86c0335b15a3",
+  "family": "sot",
+  "question": "Will Saudi Arabia have more shots on target than Cape Verde in the second half?",
+  "prob": 36
+ },
+ {
+  "market_id": "53d1cfb1-c433-4bf5-bb0e-2d9b82cfec0e",
+  "family": "offsides",
+  "question": "Will Cape Verde be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "ae22aa51-8a21-4455-9086-ca124c9c2656",
+  "family": "penalty",
+  "question": "Will a penalty kick be awarded in the match?",
+  "prob": 27
+ },
+ {
+  "market_id": "ddb0aebe-cbe0-4040-963a-6096f6b5571f",
+  "family": "cards_compare",
+  "question": "Will Saudi Arabia receive more cards than Cape Verde?",
+  "prob": 34
+ },
+ {
+  "market_id": "085e6d40-55c7-4070-b356-fcdba73edb6b",
+  "family": "both_sot",
+  "question": "Will both teams have at least 1 shot on target in the second half?",
+  "prob": 71
+ },
+ {
+  "market_id": "f16fed56-b5a2-4d37-9553-ac4196eac2c0",
+  "family": "fouls",
+  "question": "Will Cape Verde commit more fouls than Saudi Arabia?",
+  "prob": 41
+ },
+ {
+  "market_id": "9d58ebc6-35db-495e-87a8-82d61798e640",
+  "family": "player_sot",
+  "question": "Will Darwin N\u00fa\u00f1ez have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "8392278e-6be8-46dc-89c7-456cb123846c",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 42
+ },
+ {
+  "market_id": "ecdf6acb-eef7-45de-88ad-cab0ecf41882",
+  "family": "corners",
+  "question": "Will there be 9 or more total corner kicks in the match?",
+  "prob": 51
+ },
+ {
+  "market_id": "cb8219c4-07cd-4d69-8c99-297c9a8c8944",
+  "family": "total_goals",
+  "question": "Will the second half have 2 or more total goals?",
+  "prob": 38
+ },
+ {
+  "market_id": "0399ea52-41c2-48b7-b304-5d915cffa527",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 42
+ },
+ {
+  "market_id": "2b098e01-ee28-4740-a472-0e47702583de",
+  "family": "ht_tied",
+  "question": "At halftime, will the match be tied?",
+  "prob": 35
+ },
+ {
+  "market_id": "d65224ff-c16d-4f3a-ab5c-e389871cecf1",
+  "family": "team_scores",
+  "question": "Will Uruguay score at least 1 goal?",
+  "prob": 50
+ },
+ {
+  "market_id": "6dd84759-11e1-408d-8d60-5eb46f13197e",
+  "family": "player_sot",
+  "question": "Will Dani Olmo have at least 1 shot on target in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "f3ecfd87-4562-4e01-afd7-5e89c3db468b",
+  "family": "sot",
+  "question": "In the second half, will Uruguay have more shots on target than Spain?",
+  "prob": 26
+ },
+ {
+  "market_id": "e3b6f5b3-e5f0-4f9c-8453-121aa08d0e9e",
+  "family": "fouls",
+  "question": "Will Uruguay commit more fouls than Spain?",
+  "prob": 52
+ },
+ {
+  "market_id": "8c8c3f98-ee29-44ba-8ce9-668ab7cacf63",
+  "family": "player_involve",
+  "question": "Will Mohanad Ali score or assist a goal (excluding own goals)?",
+  "prob": 33
+ },
+ {
+  "market_id": "770ad5f3-f151-4774-8ce8-648ed9fedda4",
+  "family": "result",
+  "question": "Will Senegal win the match?",
+  "prob": 65
+ },
+ {
+  "market_id": "aaf82bff-2ff9-4dc8-bce6-aceedd49b5f8",
+  "family": "sot",
+  "question": "Will Senegal have more shots on target than Iraq in the second half?",
+  "prob": 51
+ },
+ {
+  "market_id": "8acfae2d-9dfa-441b-bd3c-ccd1b272b208",
+  "family": "player_sot",
+  "question": "Will Sadio Man\u00e9 have at least 1 shot on target in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "a394d05e-8bae-4a79-8353-d48ca39623d0",
+  "family": "fouls",
+  "question": "Will Iraq commit more fouls than Senegal?",
+  "prob": 59
+ },
+ {
+  "market_id": "5618e01b-c0f1-4e26-b591-a4642f0a57da",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 26
+ },
+ {
+  "market_id": "85f51a2a-412f-41ee-b04b-bb0fbf465867",
+  "family": "cards_compare",
+  "question": "Will Iraq receive more cards than Senegal?",
+  "prob": 45
+ },
+ {
+  "market_id": "eec6115c-c5cd-42a2-a464-9833f71d8f6c",
+  "family": "offsides",
+  "question": "Will Iraq be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "98025628-31c6-4c67-aa35-f2d2e707843d",
+  "family": "corners",
+  "question": "At halftime, will Iraq have more corner kicks than Senegal?",
+  "prob": 22
+ },
+ {
+  "market_id": "dfec43ab-c159-4e45-927c-91fb23cfd0cb",
+  "family": "team_scores",
+  "question": "Will France score in the first half?",
+  "prob": 44
+ },
+ {
+  "market_id": "7d3e7e2f-9431-43b0-8c28-85b85cea10c0",
+  "family": "team_scores",
+  "question": "Will Norway score at least 1 goal?",
+  "prob": 56
+ },
+ {
+  "market_id": "b832694d-f726-411f-8f65-019adcb4300b",
+  "family": "sot",
+  "question": "Will there be 8 or more total shots on target?",
+  "prob": 52
+ },
+ {
+  "market_id": "7a130803-fbae-4e21-a52c-5d69a60ee2d3",
+  "family": "corners",
+  "question": "In the second half, will Norway have more corner kicks than France?",
+  "prob": 29
+ },
+ {
+  "market_id": "820b13fd-850c-4e17-a579-c998d84542d6",
+  "family": "fouls",
+  "question": "Will Norway commit more fouls than France?",
+  "prob": 47
+ },
+ {
+  "market_id": "e769d43d-68d7-45da-a2bc-e3952c9b14d4",
+  "family": "result",
+  "question": "Will Norway win the match?",
+  "prob": 20
+ },
+ {
+  "market_id": "1621f643-023f-476b-89c4-b9756debc982",
+  "family": "player_goalscorer",
+  "question": "Will Folarin Balogun score a goal (excluding own goals)?",
+  "prob": 38
+ },
+ {
+  "market_id": "5c00aa2a-b63d-4421-b499-e5934d484660",
+  "family": "player_involve",
+  "question": "Will Orkun K\u00f6k\u00e7\u00fc score or assist a goal (excluding own goals)?",
+  "prob": 33
+ },
+ {
+  "market_id": "1a80bccf-9a17-4f00-9d2f-79691d07f104",
+  "family": "corners",
+  "question": "Will T\u00fcrkiye have 5 or more corner kicks?",
+  "prob": 43
+ },
+ {
+  "market_id": "ae075ae1-947a-46e2-8ed4-18970d0d5869",
+  "family": "total_goals",
+  "question": "Will the match have 3 or more total goals?",
+  "prob": 42
+ },
+ {
+  "market_id": "d542391d-73f9-4ffa-997f-60fd781954d7",
+  "family": "result",
+  "question": "Will T\u00fcrkiye win the match?",
+  "prob": 32
+ },
+ {
+  "market_id": "02c05f36-5f64-4795-b1ff-6754af7e39a9",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "8d4e79e8-b5ab-47ba-8436-9a5cffb63cc1",
+  "family": "compound_first_and_2h",
+  "question": "Will T\u00fcrkiye score the first goal of the game and United States score in the second half?",
+  "prob": 21
+ },
+ {
+  "market_id": "cf1370c2-71c8-4ca7-ba43-6a33f4ebb546",
+  "family": "half_vs_half_goals",
+  "question": "Will the second half have more total goals than the first half?",
+  "prob": 38
+ },
+ {
+  "market_id": "8578dd00-e2e3-4c2d-b53a-5d58b086db13",
+  "family": "offsides",
+  "question": "Will T\u00fcrkiye be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "ba70624d-9a88-4c78-8b22-d907b1353129",
+  "family": "fouls",
+  "question": "Will United States commit more fouls than T\u00fcrkiye?",
+  "prob": 40
+ },
+ {
+  "market_id": "99a613f2-bdf5-437e-aebf-ff291ad9d288",
+  "family": "player_sot",
+  "question": "Will Julio Enciso have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "b94bad54-14e4-4cf2-8e3e-3475001e5a29",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 42
+ },
+ {
+  "market_id": "da55a43a-8185-42f1-93f3-c3a0c9fa1941",
+  "family": "total_goals",
+  "question": "Will the second half have 2 or more total goals?",
+  "prob": 37
+ },
+ {
+  "market_id": "72103e92-79ab-46f5-9655-56c82b11537e",
+  "family": "result",
+  "question": "Will Paraguay win the match?",
+  "prob": 37
+ },
+ {
+  "market_id": "3fd7f1f2-0dae-4e3b-a337-0daf41891712",
+  "family": "half_vs_half_goals",
+  "question": "Will the second half have more total goals than the first half?",
+  "prob": 38
+ },
+ {
+  "market_id": "74c4c6e4-6366-4cbd-8a65-7de89c06e89a",
+  "family": "sot",
+  "question": "Will Australia have more shots on target than Paraguay in the second half?",
+  "prob": 32
+ },
+ {
+  "market_id": "a25a386c-2c5a-4ead-82dc-54310230e45e",
+  "family": "offsides",
+  "question": "Will Paraguay be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "f6ecb810-d634-484f-af2a-05f39f7df8c9",
+  "family": "fouls",
+  "question": "Will Australia commit more fouls than Paraguay?",
+  "prob": 43
+ },
+ {
+  "market_id": "9a7e797b-c891-4939-ba4f-d2452328c1af",
+  "family": "offsides",
+  "question": "Will Australia be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "d1aca960-823a-4d5d-8a76-563cdccc9ea3",
+  "family": "player_goalscorer",
+  "question": "Will Viktor Gy\u00f6keres score a goal (excluding own goals)?",
+  "prob": 46
+ },
+ {
+  "market_id": "bdd0ae28-b4ca-4b9f-9e0d-28298d88fd0b",
+  "family": "player_involve",
+  "question": "Will Takefusa Kubo score or assist a goal (excluding own goals)?",
+  "prob": 41
+ },
+ {
+  "market_id": "f147df3f-af77-4054-8d99-bc71e92d5449",
+  "family": "corners",
+  "question": "Will Sweden have 5 or more corner kicks?",
+  "prob": 39
+ },
+ {
+  "market_id": "1ad780fa-173e-4f9b-bbfc-b3064a76bc5c",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 43
+ },
+ {
+  "market_id": "6acf741f-5327-4cc1-a8ff-aa459d4d3a34",
+  "family": "result",
+  "question": "Will Japan win the match?",
+  "prob": 37
+ },
+ {
+  "market_id": "90dbecb7-6465-4f0e-9dfc-cd01a71445d7",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "b6d02831-0c03-4a06-80ea-48f0fa52f95e",
+  "family": "sot",
+  "question": "Will Japan have more shots on target than Sweden in the second half?",
+  "prob": 38
+ },
+ {
+  "market_id": "3f456a6c-fb2c-46c9-bd51-9f64281e11e6",
+  "family": "goals_compare_half",
+  "question": "Will Sweden score more goals than Japan in the second half?",
+  "prob": 23
+ },
+ {
+  "market_id": "0884f633-afdc-40bd-9a92-5e36d74097d0",
+  "family": "sot",
+  "question": "In the second half, will Japan have more shots on target than Sweden?",
+  "prob": 38
+ },
+ {
+  "market_id": "c7d10968-a2ae-466b-8ca7-0381dcb66bf8",
+  "family": "offsides",
+  "question": "Will Sweden be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "59997c37-80d1-4581-b8b5-897f1494509f",
+  "family": "player_involve",
+  "question": "Will Cody Gakpo score or assist a goal (excluding own goals)?",
+  "prob": 49
+ },
+ {
+  "market_id": "1e01567a-7a48-4219-a0ce-e6c549172ab8",
+  "family": "sot",
+  "question": "Will there be 8 or more total shots on target?",
+  "prob": 52
+ },
+ {
+  "market_id": "bb7f999d-8465-41b3-be43-21a6c6cd5f3a",
+  "family": "player_sot",
+  "question": "Will Ellyes Skhiri have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "56843463-cd19-466d-aed6-bf20ca237f1b",
+  "family": "team_scores",
+  "question": "Will Tunisia score in the second half?",
+  "prob": 25
+ },
+ {
+  "market_id": "8b2ac43c-517b-44b7-8417-a8fc3ddc91e4",
+  "family": "sot",
+  "question": "Will France have more shots on target than Norway in the second half?",
+  "prob": 41
+ },
+ {
+  "market_id": "a760be07-bcf4-47a3-9e92-12364ea2c469",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "29d23fce-ea8d-4b73-890d-c12181353a0d",
+  "family": "cards_compare",
+  "question": "Will Cura\u00e7ao receive more cards than Ivory Coast?",
+  "prob": 42
+ },
+ {
+  "market_id": "6d41b943-0e83-4a74-873a-9a43e0daff1f",
+  "family": "team_scores",
+  "question": "Will Cura\u00e7ao score at least 1 goal?",
+  "prob": 46
+ },
+ {
+  "market_id": "9cb3dfb0-5e38-4f52-8036-1de244d276a6",
+  "family": "corners",
+  "question": "Will Ivory Coast have 5 or more corner kicks?",
+  "prob": 54
+ },
+ {
+  "market_id": "192c9cf0-9bb3-4b6b-9fbe-58a7e2d82ae4",
+  "family": "player_sot",
+  "question": "Will Leandro Bacuna have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "65a97cc9-1e94-47b0-9b9c-4f619bccde28",
+  "family": "player_sot",
+  "question": "Will Ibrahim Sangar\u00e9 have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "b880cd6f-b6ec-4e4c-b96b-b91fc589b2b0",
+  "family": "fouls",
+  "question": "Will Tunisia commit more fouls than Netherlands?",
+  "prob": 57
+ },
+ {
+  "market_id": "c43096e6-d2f5-4879-9af7-de2f242829f3",
+  "family": "both_sot",
+  "question": "Will both teams have at least 1 shot on target in the second half?",
+  "prob": 68
+ },
+ {
+  "market_id": "217bd562-df1a-4823-822f-d27849f03904",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 27
+ },
+ {
+  "market_id": "7a16466f-531e-4022-9eba-34802ebc5bdf",
+  "family": "cards_compare",
+  "question": "Will Netherlands receive more cards than Tunisia?",
+  "prob": 27
+ },
+ {
+  "market_id": "24b509b2-e109-42a3-9fcc-6945a1d5b7d9",
+  "family": "team_scores",
+  "question": "Will Tunisia score at least 1 goal?",
+  "prob": 40
+ },
+ {
+  "market_id": "ca95f4c5-4d97-48ae-9ec6-fe61cd2e99b1",
+  "family": "ht_tied",
+  "question": "At halftime, will the match be tied?",
+  "prob": 34
+ },
+ {
+  "market_id": "79a582c4-cd85-42c0-96cb-62d02d76df39",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 34
+ },
+ {
+  "market_id": "6bf4ef09-f9b4-459c-b401-0fa9a339a8e2",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 42
+ },
+ {
+  "market_id": "879ad9f6-f7a9-448c-ae04-b82e901df0d3",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "54f18223-5783-4b89-8f43-8e4263bde0b3",
+  "family": "sot",
+  "question": "Will there be 4 or more total shots on target in the second half?",
+  "prob": 58
+ },
+ {
+  "market_id": "894a31ee-2fda-4aec-8fe2-7b830f6c47f2",
+  "family": "sot",
+  "question": "Will Morocco have more shots on target than Haiti in the second half?",
+  "prob": 51
+ },
+ {
+  "market_id": "b9517893-70d7-40ae-bfcc-75fa58d0364b",
+  "family": "cards_compare",
+  "question": "Will Haiti receive more cards than Morocco?",
+  "prob": 45
+ },
+ {
+  "market_id": "3c8d80cf-6644-4bea-889b-bcf4e745e743",
+  "family": "team_scores",
+  "question": "Will Scotland score at least 1 goal?",
+  "prob": 52
+ },
+ {
+  "market_id": "2be23a87-2fee-4f79-a4f8-8360c5a3e302",
+  "family": "total_goals",
+  "question": "Will the match have 3 or more total goals?",
+  "prob": 46
+ },
+ {
+  "market_id": "15f2d060-7b53-4652-ad0c-97688dbd6f06",
+  "family": "corners",
+  "question": "At halftime, will Haiti have more corner kicks than Morocco?",
+  "prob": 22
+ },
+ {
+  "market_id": "cd6312db-6906-41c7-bdaf-f6e099a403c0",
+  "family": "sot",
+  "question": "Will Cura\u00e7ao have more shots on target than Ivory Coast in the second half?",
+  "prob": 25
+ },
+ {
+  "market_id": "cb8c5e9b-814a-4f0e-88a0-3626fe27d561",
+  "family": "half_vs_half_goals",
+  "question": "Will the second half have more goals than the first half?",
+  "prob": 38
+ },
+ {
+  "market_id": "c84f75f8-c458-4b2f-9cca-b9924f5ad619",
+  "family": "first_goal_2h",
+  "question": "Will Ivory Coast score the first goal of the second half?",
+  "prob": 40
+ },
+ {
+  "market_id": "ee6db93a-2238-4c40-8a8c-167fc42019d8",
+  "family": "fouls",
+  "question": "Will Ivory Coast commit more fouls than Cura\u00e7ao?",
+  "prob": 27
+ },
+ {
+  "market_id": "a10767be-86c6-4284-ac96-1703b3fbc6ff",
+  "family": "offsides",
+  "question": "Will Cura\u00e7ao be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "b386c19f-c40d-4429-9299-7f3577d9645e",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 42
+ },
+ {
+  "market_id": "fffde7cb-d69d-49c6-92c3-f311404a0240",
+  "family": "team_scores",
+  "question": "Will Ecuador score at least 1 goal?",
+  "prob": 54
+ },
+ {
+  "market_id": "ce748c16-45f0-49ab-9b34-915bc39b59d4",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 33
+ },
+ {
+  "market_id": "a41e8e86-7714-4347-9afa-ab6681796d3b",
+  "family": "offsides",
+  "question": "Will Ecuador be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "64e0306b-93a9-4bad-a1db-7e45937241c4",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "331693f9-d0a8-44ba-9fdd-6cf87c0b87a8",
+  "family": "sot",
+  "question": "Will Germany have more shots on target than Ecuador in the second half?",
+  "prob": 44
+ },
+ {
+  "market_id": "238c4a80-d82b-49af-ae9b-552df3529fa1",
+  "family": "goals_compare_half",
+  "question": "Will Germany score more goals than Ecuador in the second half?",
+  "prob": 39
+ },
+ {
+  "market_id": "48dd7121-df65-4da5-be13-2407908404af",
+  "family": "corners",
+  "question": "In the second half, will Ecuador have more corner kicks than Germany?",
+  "prob": 27
+ },
+ {
+  "market_id": "ac33f881-ea23-473b-91d1-861ca8a47112",
+  "family": "fouls",
+  "question": "Will Ecuador commit more fouls than Germany?",
+  "prob": 50
+ },
+ {
+  "market_id": "8927d501-67b2-408a-a234-94cd8392e267",
+  "family": "both_sot",
+  "question": "At halftime, will both teams have at least 1 shot on target?",
+  "prob": 64
+ },
+ {
+  "market_id": "4e3ead83-ce45-4c5c-9ae6-03f1a5913f48",
+  "family": "player_sot",
+  "question": "Will Patrik Schick have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "2812323f-bf32-43b4-b9cc-64101cc863b0",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 42
+ },
+ {
+  "market_id": "7202ff14-a689-4ee6-b8a9-a333482ad0f0",
+  "family": "team_scores",
+  "question": "Will Czechia score in the second half?",
+  "prob": 36
+ },
+ {
+  "market_id": "399c0c0c-dcd0-4e51-a95c-1289efc7aa8d",
+  "family": "result",
+  "question": "Will Czechia win the match?",
+  "prob": 19
+ },
+ {
+  "market_id": "664519ef-75f9-4537-8833-874c3b2767c4",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 33
+ },
+ {
+  "market_id": "d6f306c8-a195-4764-987a-ecb14a9c4b37",
+  "family": "corners",
+  "question": "Will Mexico finish with more corner kicks than Czechia?",
+  "prob": 48
+ },
+ {
+  "market_id": "f08b2b88-b837-4d00-bea7-4c2bf9815ce7",
+  "family": "sot",
+  "question": "Will Czechia have more shots on target than Mexico in the second half?",
+  "prob": 28
+ },
+ {
+  "market_id": "ff5e80cf-acb3-4051-8910-ded474179041",
+  "family": "offsides",
+  "question": "Will Mexico be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "82e3b748-c15c-484a-aa50-46c3773ea827",
+  "family": "fouls",
+  "question": "Will Czechia commit more fouls than Mexico?",
+  "prob": 48
+ },
+ {
+  "market_id": "81d6f4f9-7098-4339-9c35-f44b808ec7ba",
+  "family": "player_sot",
+  "question": "Will Son Heung-min have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "72cf3d7e-e17a-406a-94bd-72c5e4a971c5",
+  "family": "player_sot",
+  "question": "Will Oswin Appollis have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "efe9ffa6-9c5e-4b4b-8cff-ed1596cf1bbd",
+  "family": "sot",
+  "question": "Will South Africa have 3 or more shots on target?",
+  "prob": 60
+ },
+ {
+  "market_id": "a45c8d03-d20a-494f-9bf7-6b0e0cebcee4",
+  "family": "ht_tied",
+  "question": "At halftime, will the match be tied?",
+  "prob": 37
+ },
+ {
+  "market_id": "7d85ba3b-8446-4e7f-81a9-c8423e4d6281",
+  "family": "result",
+  "question": "Will South Africa win the match?",
+  "prob": 14
+ },
+ {
+  "market_id": "77b4602d-c721-4b57-bbf7-4dfddfd876d6",
+  "family": "fouls",
+  "question": "Will South Africa commit more fouls than South Korea?",
+  "prob": 51
+ },
+ {
+  "market_id": "a4ace397-157b-4ff3-9693-9952953ed644",
+  "family": "sot",
+  "question": "Will South Korea have more shots on target than South Africa in the second half?",
+  "prob": 45
+ },
+ {
+  "market_id": "a11f8a6d-fa76-49b8-8d02-f02f2dc7ed35",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 28
+ },
+ {
+  "market_id": "0cfce1d7-a800-40a7-85df-baf5a7feb252",
+  "family": "cards",
+  "question": "Will South Korea receive at least 1 card in the second half?",
+  "prob": 66
+ },
+ {
+  "market_id": "0d3b720d-297d-4cfb-8f20-2cf67665d312",
+  "family": "offsides",
+  "question": "Will South Korea be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "713e81f0-3f47-408b-a6ea-c0bdc1f39406",
+  "family": "team_scores",
+  "question": "Will Haiti score in the second half?",
+  "prob": 24
+ },
+ {
+  "market_id": "869c505c-ec0b-47d8-8a0c-d0fc3b8546cd",
+  "family": "player_sot",
+  "question": "Will Duckens Nazon have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "4a02f03a-22f6-451e-89a5-a70aaa514ddf",
+  "family": "team_scores",
+  "question": "Will Morocco score in the first half?",
+  "prob": 52
+ },
+ {
+  "market_id": "3a0b2520-f5f9-4f91-b160-ff38946d30c5",
+  "family": "result",
+  "question": "Will Morocco win the match?",
+  "prob": 64
+ },
+ {
+  "market_id": "def3836a-c47e-485b-98a6-d746d1808600",
+  "family": "fouls",
+  "question": "Will Haiti commit more fouls than Morocco?",
+  "prob": 59
+ },
+ {
+  "market_id": "66f08006-97f8-4750-a8f2-5c62a1eae808",
+  "family": "team_scores",
+  "question": "Will Brazil score in the first half?",
+  "prob": 49
+ },
+ {
+  "market_id": "b84635b8-99cf-4781-a0ca-dc01d0e7bfa7",
+  "family": "sot",
+  "question": "Will Scott McTominay have at least 1 shot on target?",
+  "prob": 88
+ },
+ {
+  "market_id": "c2c90c20-269b-414c-ae56-09191fac0d0d",
+  "family": "team_scores",
+  "question": "Will Brazil score in the second half?",
+  "prob": 58
+ },
+ {
+  "market_id": "719f2a7b-75db-4c51-880f-8920c67e01f2",
+  "family": "fouls",
+  "question": "Will Canada commit more fouls than Switzerland?",
+  "prob": 45
+ },
+ {
+  "market_id": "089b0204-ca7f-49e3-ba78-f4ac586de982",
+  "family": "player_involve",
+  "question": "Will Harry Kane score or assist a goal (excluding own goals)?",
+  "prob": 64
+ },
+ {
+  "market_id": "e9b10518-8e39-4994-9330-f6d4b43c7a75",
+  "family": "player_sot",
+  "question": "Will Antoine Semenyo have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "91b6fe06-3e47-43bf-a71d-68f30bc20237",
+  "family": "offsides",
+  "question": "Will Panama be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "6df09370-07bd-4f4f-acf9-298b3935bda4",
+  "family": "sot",
+  "question": "Will Panama have more shots on target than Croatia in the second half?",
+  "prob": 25
+ },
+ {
+  "market_id": "48443cca-6f5a-4d48-9859-16beedd7a369",
+  "family": "first_goal_2h",
+  "question": "Will Croatia score the first goal of the second half?",
+  "prob": 39
+ },
+ {
+  "market_id": "f00dbded-f8cc-4b3b-9beb-ad5fb2da9c5f",
+  "family": "fouls",
+  "question": "Will Panama commit more fouls than Croatia?",
+  "prob": 53
+ },
+ {
+  "market_id": "6dae6592-394a-47d2-bc96-bd054861c672",
+  "family": "cards_compare",
+  "question": "Will Croatia receive more cards than Panama?",
+  "prob": 29
+ },
+ {
+  "market_id": "8a5bd6ce-c769-42e7-afdc-7804e2404513",
+  "family": "team_scores",
+  "question": "Will Panama score at least 1 goal?",
+  "prob": 47
+ },
+ {
+  "market_id": "ef4fcf3d-a487-48f5-9b6d-c8f5b933d1c4",
+  "family": "corners",
+  "question": "Will there be 9 or more total corner kicks?",
+  "prob": 50
+ },
+ {
+  "market_id": "550962a6-9b64-42d2-b86b-b26a753c70e2",
+  "family": "sot",
+  "question": "Will Panama have 3 or more shots on target?",
+  "prob": 59
+ },
+ {
+  "market_id": "9cbc3163-74d0-4ee0-a0a3-c555fc3d671e",
+  "family": "player_sot",
+  "question": "Will Jos\u00e9 Fajardo have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "47ce8043-bf65-4a37-ae9b-151e5e55ab0a",
+  "family": "player_sot",
+  "question": "Will Luka Su\u010di\u0107 have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "bd60d68b-2030-4ff8-abe3-bbe90d9d9dda",
+  "family": "fouls",
+  "question": "Will Colombia commit more fouls than DR Congo?",
+  "prob": 26
+ },
+ {
+  "market_id": "d46b2d9a-771e-472d-b922-cb88eb31cc6a",
+  "family": "sot",
+  "question": "Will Colombia have more shots on target than DR Congo in the second half?",
+  "prob": 48
+ },
+ {
+  "market_id": "c47c8706-e12a-4bee-8981-9debfaa10b8a",
+  "family": "goals_compare_half",
+  "question": "Will Colombia score more goals than DR Congo in the second half?",
+  "prob": 45
+ },
+ {
+  "market_id": "6cc3d2d2-52f1-4d87-8d97-f76be80cee0a",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "30f665b2-681e-47c9-a37d-3686ad1acb46",
+  "family": "result",
+  "question": "Will Colombia win the match?",
+  "prob": 57
+ },
+ {
+  "market_id": "dadbc83d-64ed-4875-a3ec-6944a44edc0d",
+  "family": "ht_winning",
+  "question": "At halftime, will Colombia be winning?",
+  "prob": 39
+ },
+ {
+  "market_id": "541a410d-204f-48eb-a53f-87f76127c090",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 43
+ },
+ {
+  "market_id": "638279a7-2997-47f0-ad0e-d04a9cc8af96",
+  "family": "corners",
+  "question": "Will Colombia have 5 or more corner kicks?",
+  "prob": 55
+ },
+ {
+  "market_id": "e7e62f13-f30a-4f79-871f-60a982e934d9",
+  "family": "player_involve",
+  "question": "Will Luis D\u00edaz score or assist a goal (excluding own goals)?",
+  "prob": 49
+ },
+ {
+  "market_id": "e0aa9593-c28b-41b0-a1d8-4892ad131109",
+  "family": "player_sot",
+  "question": "Will C\u00e9dric Bakambu have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "8e14dfb3-7775-460f-bde4-5b587a89cd2b",
+  "family": "offsides",
+  "question": "Will Switzerland be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "a7ed371f-188f-4bed-b0d9-7857ca3490f7",
+  "family": "cards",
+  "question": "Will there be 2 or more total cards shown in the second half?",
+  "prob": 59
+ },
+ {
+  "market_id": "f3bdf6c3-bc7b-43b0-886f-8707005a377f",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 35
+ },
+ {
+  "market_id": "97dc4881-1079-49b9-8b4b-619afa237844",
+  "family": "penalty",
+  "question": "Will a penalty kick be awarded in the match?",
+  "prob": 27
+ },
+ {
+  "market_id": "fb138848-cf10-4d98-a44a-c29a35fae5da",
+  "family": "sot",
+  "question": "Will Switzerland have more shots on target than Canada in the second half?",
+  "prob": 39
+ },
+ {
+  "market_id": "9dd1e577-fd76-4e44-a816-c40851a454c5",
+  "family": "result",
+  "question": "Will Switzerland win the match?",
+  "prob": 39
+ },
+ {
+  "market_id": "e55f0f28-4e7e-448d-96fa-782df77e283f",
+  "family": "total_goals",
+  "question": "Will the second half have 2 or more total goals?",
+  "prob": 37
+ },
+ {
+  "market_id": "cade05a8-9696-474b-8cd3-5f9f12b66b48",
+  "family": "player_sot",
+  "question": "Will Granit Xhaka have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "e68fe3bd-51e6-4553-8352-2bb764e18717",
+  "family": "player_sot",
+  "question": "Will Jonathan David have at least 1 shot on target?",
+  "prob": 63
+ },
+ {
+  "market_id": "6730042d-901f-4271-a946-5fc1b8e67e1d",
+  "family": "offsides",
+  "question": "Will Qatar be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "25b4e89d-d717-428e-8b64-2fa6a74dab66",
+  "family": "corners",
+  "question": "In the second half, will Bosnia and Herzegovina have more corner kicks than Qatar?",
+  "prob": 46
+ },
+ {
+  "market_id": "4c602eb6-bb78-42ab-ab63-19f78b237419",
+  "family": "goals_compare_half",
+  "question": "Will Bosnia and Herzegovina score more goals than Qatar in the second half?",
+  "prob": 42
+ },
+ {
+  "market_id": "28b480b3-11f0-45e3-b10b-5c52291ebf7d",
+  "family": "sot",
+  "question": "Will Qatar have more shots on target than Bosnia and Herzegovina in the second half?",
+  "prob": 26
+ },
+ {
+  "market_id": "5f02afdb-e0bf-42fc-bf39-454e14117e79",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "28a19286-8e66-4185-80d6-e3376a91603b",
+  "family": "fouls",
+  "question": "Will Qatar commit more fouls than Bosnia and Herzegovina?",
+  "prob": 52
+ },
+ {
+  "market_id": "da424c44-408a-482c-8fda-ab8e654fdcf8",
+  "family": "cards_compare",
+  "question": "Will Bosnia and Herzegovina receive more cards than Qatar?",
+  "prob": 29
+ },
+ {
+  "market_id": "ea3afc71-5f40-4719-97ef-6e667f31d91a",
+  "family": "result",
+  "question": "Will Bosnia and Herzegovina win the match?",
+  "prob": 53
+ },
+ {
+  "market_id": "5e2e012e-3dcf-432f-82be-8df20b05a15d",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 43
+ },
+ {
+  "market_id": "5b16e857-b2b7-452e-a86b-5bf4949486c8",
+  "family": "player_sot",
+  "question": "Will Edin D\u017eeko have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "549a766a-1816-4d77-b825-e606888bf7be",
+  "family": "sot",
+  "question": "Will Brazil have more shots on target than Scotland in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "73248098-9b9e-4778-9bb3-4c756a5ebc64",
+  "family": "offsides",
+  "question": "Will Scotland be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "1bf8817b-af81-41cb-9411-ae66838ac1b8",
+  "family": "compound_first_and_2h",
+  "question": "Will Scotland score the first goal of the game and Brazil score in the second half?",
+  "prob": 16
+ },
+ {
+  "market_id": "da48a8b7-2baf-4a28-9cf6-be7bf3783d5e",
+  "family": "corners",
+  "question": "Will Brazil finish with more corner kicks than Scotland?",
+  "prob": 53
+ },
+ {
+  "market_id": "7cc86d32-71c5-4d65-b62a-4ba2f9259469",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "60c9d3f6-4a05-4f45-9f23-9b2e7b0c18be",
+  "family": "sot",
+  "question": "Will Ghana have more shots on target than England in the second half?",
+  "prob": 22
+ },
+ {
+  "market_id": "1a5f47ed-33e1-48ff-8830-75995570683c",
+  "family": "result",
+  "question": "Will England win the match?",
+  "prob": 64
+ },
+ {
+  "market_id": "4e4cd5fa-2e2e-437b-9f6a-62dead27ec74",
+  "family": "corners",
+  "question": "Will Ghana have 5 or more corner kicks?",
+  "prob": 26
+ },
+ {
+  "market_id": "95627759-e55e-42b2-b16f-f5ea520179a2",
+  "family": "team_scores",
+  "question": "Will Jordan score at least 1 goal?",
+  "prob": 48
+ },
+ {
+  "market_id": "483d6c6f-df9d-4ff6-822e-c12d2f322999",
+  "family": "player_sot",
+  "question": "Will Riyad Mahrez have at least 1 shot on target in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "3b3b16e2-8f9f-462b-86a9-395fcf7aecb0",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "9854c8e3-ac27-44c1-8755-5b7ba6e453c9",
+  "family": "offsides",
+  "question": "Will Algeria be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "7d3c9145-2a6d-4c95-b44c-1cf2f28eddbc",
+  "family": "compound_first_and_2h",
+  "question": "Will Jordan score the first goal of the game and Algeria score in the second half?",
+  "prob": 15
+ },
+ {
+  "market_id": "fe636b52-a740-4479-aace-6f45ec2a8b1d",
+  "family": "player_goalscorer",
+  "question": "Will Sadio Man\u00e9 score a goal (excluding own goals)?",
+  "prob": 24
+ },
+ {
+  "market_id": "edc723ad-ebe1-479d-ba72-fc30f6784aa3",
+  "family": "sot",
+  "question": "Will Norway have 6 or more shots on target?",
+  "prob": 24
+ },
+ {
+  "market_id": "106011a4-4f60-4a2b-8dc3-7b86e62a91cd",
+  "family": "corners",
+  "question": "Will there be 9 or more total corner kicks?",
+  "prob": 49
+ },
+ {
+  "market_id": "daa30667-41a8-4d96-89bd-ee02d348dcf7",
+  "family": "ht_tied",
+  "question": "At halftime, will the match be tied?",
+  "prob": 37
+ },
+ {
+  "market_id": "2e319b9e-222b-42d3-899a-c02ebb50a02a",
+  "family": "result",
+  "question": "Will Argentina win the match?",
+  "prob": 64
+ },
+ {
+  "market_id": "4bde0b61-f7be-491d-b904-6f77a66d6324",
+  "family": "fouls",
+  "question": "Will Jordan commit more fouls than Algeria?",
+  "prob": 52
+ },
+ {
+  "market_id": "0028af24-c404-48a3-93a4-dbaa312873ff",
+  "family": "sot",
+  "question": "Will there be 4 or more total shots on target in the second half?",
+  "prob": 57
+ },
+ {
+  "market_id": "67abee3c-e87a-4a8e-ad2a-ec62c36e9b0b",
+  "family": "ht_tied",
+  "question": "At halftime, will the match be tied?",
+  "prob": 36
+ },
+ {
+  "market_id": "fb5633a1-f376-4427-915b-8b155f53da1e",
+  "family": "total_goals",
+  "question": "Will the match have 3 or more total goals?",
+  "prob": 41
+ },
+ {
+  "market_id": "991f4aed-bd68-495b-a486-5777c6696e09",
+  "family": "sot",
+  "question": "Will Argentina have 6 or more shots on target?",
+  "prob": 36
+ },
+ {
+  "market_id": "9ae92a8b-0200-4282-8837-15f42e7b62cb",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 52
+ },
+ {
+  "market_id": "fb6a23ec-aa0c-4177-b1f4-dc11c5722541",
+  "family": "player_sot",
+  "question": "Will Marcel Sabitzer have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "81272767-7a80-4fc9-8718-780e5b7b8d34",
+  "family": "corners",
+  "question": "At halftime, will Iraq have more corner kicks than France?",
+  "prob": 22
+ },
+ {
+  "market_id": "3e440d97-28bd-4bc6-99fd-ae19afa30e77",
+  "family": "fouls",
+  "question": "Will France commit more fouls than Iraq?",
+  "prob": 23
+ },
+ {
+  "market_id": "6784828e-1741-4a45-bba9-a538ebf8459a",
+  "family": "sot",
+  "question": "Will Iraq have 2 or more shots on target in the second half?",
+  "prob": 45
+ },
+ {
+  "market_id": "183fa7fb-ffc9-476b-8da8-b7c327217fc8",
+  "family": "result",
+  "question": "Will France win the match?",
+  "prob": 64
+ },
+ {
+  "market_id": "cb74766a-606c-4ddb-b126-5644e8621145",
+  "family": "team_scores",
+  "question": "Will Iraq score in the second half?",
+  "prob": 24
+ },
+ {
+  "market_id": "f383ba61-f1d7-4d67-bc62-7c13b31dfde4",
+  "family": "sot",
+  "question": "Will Iraq have 4 or more shots on target?",
+  "prob": 36
+ },
+ {
+  "market_id": "84f61c4c-4eef-4552-9e31-0fff10f913d8",
+  "family": "team_scores",
+  "question": "Will France score in the first half?",
+  "prob": 52
+ },
+ {
+  "market_id": "bc149420-04e9-42e5-a89f-8b48ff70589a",
+  "family": "player_sot",
+  "question": "Will Mohanad Ali have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "0cc6a8f7-c900-49c4-a63d-2690d7062aa8",
+  "family": "offsides",
+  "question": "Will Senegal be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "d10b7858-0adb-4826-8334-721ba766747b",
+  "family": "fouls",
+  "question": "Will Senegal commit more fouls than Norway?",
+  "prob": 42
+ },
+ {
+  "market_id": "93add2e1-ef96-4273-952a-0278a3ec16d9",
+  "family": "sot",
+  "question": "Will there be 4 or more total shots on target in the second half?",
+  "prob": 57
+ },
+ {
+  "market_id": "74361392-bbd2-4537-a6a9-76cb154852c0",
+  "family": "result",
+  "question": "Will Norway win the match?",
+  "prob": 35
+ },
+ {
+  "market_id": "d5280dd9-1186-4445-a989-24af39d0b713",
+  "family": "team_scores",
+  "question": "Will Argentina score in the second half?",
+  "prob": 66
+ },
+ {
+  "market_id": "47c70f44-d6da-4dd4-9486-5bda8a49a50d",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 55
+ },
+ {
+  "market_id": "dd84b0a3-c391-4489-8945-2fac1c7241d1",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 26
+ },
+ {
+  "market_id": "a8c63bac-b91c-45b4-adf0-2770346ed218",
+  "family": "both_sot",
+  "question": "Will both teams have at least 1 shot on target in the second half?",
+  "prob": 68
+ },
+ {
+  "market_id": "c68e9b78-6ae8-47c7-861e-6996a2cf8280",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 26
+ },
+ {
+  "market_id": "9315d769-e4e4-4946-a133-de1ea821f6a0",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown?",
+  "prob": 31
+ },
+ {
+  "market_id": "3a6fd001-df6b-46c1-9f9e-4d0e4e4cfd04",
+  "family": "fouls",
+  "question": "Will Ghana commit more fouls than England?",
+  "prob": 59
+ },
+ {
+  "market_id": "79139fdc-c500-48b1-a25e-ab06cd319e4e",
+  "family": "cards",
+  "question": "Will Iraq receive at least 1 card in the second half?",
+  "prob": 72
+ },
+ {
+  "market_id": "0a389ffb-8dd7-4cfc-8c8e-3bba3f3eee0a",
+  "family": "btts_compound",
+  "question": "Will both teams score AND the match have 3 or more total goals?",
+  "prob": 26
+ },
+ {
+  "market_id": "06e1d4dd-3f44-4ac6-99df-96572c4dd13b",
+  "family": "both_sot",
+  "question": "At halftime, will both teams have at least 1 shot on target?",
+  "prob": 61
+ },
+ {
+  "market_id": "d7b38061-1368-4af0-8f50-2be4b544189f",
+  "family": "goals_compare_half",
+  "question": "Will Norway score more goals than Senegal in the second half?",
+  "prob": 29
+ },
+ {
+  "market_id": "4031237a-a29e-42fb-8015-128b65a0a660",
+  "family": "pen_or_red",
+  "question": "Will a penalty kick be awarded OR a red card be shown in the match?",
+  "prob": 31
+ },
+ {
+  "market_id": "4ff2435c-e906-4a93-a7a9-a4b3d71746a6",
+  "family": "player_goalscorer",
+  "question": "Will Gon\u00e7alo Ramos score a goal (excluding own goals)?",
+  "prob": 44
+ },
+ {
+  "market_id": "dcfa0649-e8cc-48cd-b4ae-aa5037f3daa4",
+  "family": "sot",
+  "question": "Will Uzbekistan have 4 or more shots on target?",
+  "prob": 36
+ },
+ {
+  "market_id": "2edbae87-e4d0-40f8-9b81-ea52859f26b8",
+  "family": "total_goals",
+  "question": "Will the second half have 2 or more total goals?",
+  "prob": 37
+ },
+ {
+  "market_id": "a4940da6-3dba-440c-8b9e-580cd50ea272",
+  "family": "result",
+  "question": "Will Portugal win the match?",
+  "prob": 64
+ },
+ {
+  "market_id": "ccac7769-631a-43d3-8013-4aaedbc9d114",
+  "family": "player_sot",
+  "question": "Will Eldor Shomurodov have at least 1 shot on target in the second half?",
+  "prob": 46
+ },
+ {
+  "market_id": "cbfeb052-0320-4ad3-865d-f384d490544d",
+  "family": "offsides",
+  "question": "Will Portugal be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "53c6d590-e6d8-4c2b-a0d8-534735de7886",
+  "family": "sot",
+  "question": "In the second half, will Portugal have more shots on target than Uzbekistan?",
+  "prob": 51
+ },
+ {
+  "market_id": "8dcbcf84-b3ef-4715-bb70-6f2f4e2abd50",
+  "family": "offsides",
+  "question": "Will Uzbekistan be caught offside 2 or more times?",
+  "prob": 49
+ },
+ {
+  "market_id": "756f09a8-e08b-4433-8489-061b1445fb40",
+  "family": "player_sot",
+  "question": "Will Mousa Al-Taamari have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "f2a1202e-7832-4461-b534-2b0448090a98",
+  "family": "result",
+  "question": "Will Uruguay win the match?",
+  "prob": 70
+ },
+ {
+  "market_id": "dfb63025-c212-4c0d-a21b-ac0d69934b4e",
+  "family": "sot",
+  "question": "Will Uruguay have 6 or more shots on target?",
+  "prob": 39
+ },
+ {
+  "market_id": "8bd1d3d6-2f00-49b1-9dd9-cb3c4d9ced5d",
+  "family": "team_scores",
+  "question": "Will Cape Verde score in the second half?",
+  "prob": 31
+ },
+ {
+  "market_id": "91f72eea-03e2-42f4-bc03-ed41316b8ff7",
+  "family": "player_involve",
+  "question": "Will Darwin N\u00fa\u00f1ez score or assist a goal (excluding own goals)?",
+  "prob": 53
+ },
+ {
+  "market_id": "ff42a0c1-0d22-49d4-bad0-239f210bbc5b",
+  "family": "total_goals",
+  "question": "Will the match have 2 or fewer total goals?",
+  "prob": 53
+ },
+ {
+  "market_id": "fa64cacb-6459-4ab3-8196-d22fe617e5f6",
+  "family": "result",
+  "question": "Will New Zealand win the match?",
+  "prob": 23
+ },
+ {
+  "market_id": "06d00fad-53a1-4c69-be4c-dd0934ace203",
+  "family": "corners",
+  "question": "Will Egypt finish with more corner kicks than New Zealand?",
+  "prob": 61
+ },
+ {
+  "market_id": "cc1b5f03-3564-4f03-bf08-44a6d43302e1",
+  "family": "half_vs_half_goals",
+  "question": "Will the second half have more goals than the first half?",
+  "prob": 48
+ },
+ {
+  "market_id": "9b381f99-9aa4-46e1-a628-9f4ea3e37301",
+  "family": "sot",
+  "question": "In the second half, will New Zealand have more shots on target than Egypt?",
+  "prob": 30
+ },
+ {
+  "market_id": "4c9ed88b-3e35-4284-a58e-ccf1abcf645e",
+  "family": "fouls",
+  "question": "Will New Zealand commit more fouls than Egypt?",
+  "prob": 57
+ },
+ {
+  "market_id": "b36c6e3f-5e3e-4b8c-9bf9-9fe31f0b21f6",
+  "family": "offsides",
+  "question": "Will Egypt be caught offside 2 or more times?",
+  "prob": 55
+ },
+ {
+  "market_id": "50d5d02d-7b33-4cc8-ad30-5682f08c16f1",
+  "family": "sot",
+  "question": "Will Cape Verde have 2 or more shots on target in the second half?",
+  "prob": 50
+ },
+ {
+  "market_id": "7fdff3ae-16c0-4ce9-a555-9b88f5e1674e",
+  "family": "fouls",
+  "question": "Will Uruguay commit more fouls than Cape Verde?",
+  "prob": 30
+ },
+ {
+  "market_id": "66f941fa-aec9-41fe-b692-8c8ecc6fee52",
+  "family": "penalty",
+  "question": "Will a penalty kick be awarded in the match?",
+  "prob": 33
+ },
+ {
+  "market_id": "8e05fab9-da85-4a73-ba00-e710457f10c2",
+  "family": "cards_compare",
+  "question": "Will Cape Verde receive more cards than Uruguay?",
+  "prob": 51
+ },
+ {
+  "market_id": "10044b6c-9f17-4e25-ab54-197d0da07e9a",
+  "family": "both_sot",
+  "question": "Will both teams have at least 1 shot on target in the second half?",
+  "prob": 74
+ },
+ {
+  "market_id": "ab759afa-35c2-4adb-a620-5d837b8a1815",
+  "family": "offsides",
+  "question": "Will Uruguay be caught offside 2 or more times?",
+  "prob": 53
+ },
+ {
+  "market_id": "f52f7be4-737e-4fde-ae53-5012c89da082",
+  "family": "corners",
+  "question": "Will Austria finish with more corner kicks than Argentina?",
+  "prob": 32
+ },
+ {
+  "market_id": "04682a41-eef9-4316-bbc9-6078a5afcf6a",
+  "family": "half_vs_half_goals",
+  "question": "Will the second half have more goals than the first half?",
+  "prob": 47
+ },
+ {
+  "market_id": "9b0cd14f-f996-4322-9c64-9f7500399848",
+  "family": "sot",
+  "question": "Will Austria have more shots on target than Argentina in the second half?",
+  "prob": 29
+ },
+ {
+  "market_id": "9042bb3c-faa7-424d-b217-f75c8da0bb93",
+  "family": "offsides",
+  "question": "Will Austria be caught offside 2 or more times?",
+  "prob": 55
+ },
+ {
+  "market_id": "6ea0b900-26ef-47a9-845c-1b5077fb9681",
+  "family": "player_involve",
+  "question": "Will Mahmoud Trezeguet score or assist a goal (excluding own goals)?",
+  "prob": 33
+ },
+ {
+  "market_id": "2f921e6f-141c-4a96-9cb5-f124ba7621e6",
+  "family": "player_sot",
+  "question": "Will Ben Waine have at least 1 shot on target?",
+  "prob": 54
+ },
+ {
+  "market_id": "f7fb9de8-463b-40dc-ae85-fd2b4104fc3c",
+  "family": "cards",
+  "question": "Will there be 4 or more total cards shown?",
+  "prob": 52
+ }
+]

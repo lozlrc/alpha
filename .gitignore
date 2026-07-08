@@ -25,3 +25,6 @@ data_cache/
 *.swp
 .idea/
 .vscode/
+
+# Sports-betting research: bulk club-match download (re-fetched by pull scripts)
+sports betting/data/hist/
