@@ -91,6 +91,12 @@ def _http(url: str, payload: dict | None = None, tries: int = 4) -> object:
             wait = 15.0 * (attempt + 1)
             print(f"    rate-limited (429); backing off {wait:.0f}s ...")
             time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            if attempt == tries - 1:                    # transient net hiccups: retry too
+                raise
+            wait = 5.0 * (attempt + 1)
+            print(f"    transient error ({type(e).__name__}); retrying in {wait:.0f}s ...")
+            time.sleep(wait)
 
 
 def fetch_hyperliquid(coin: str) -> pd.DataFrame:

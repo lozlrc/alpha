@@ -1,20 +1,24 @@
 # Alpha — a backtest suite of quant trading strategies
 
-A self-contained research suite that implements **thirteen families of trading alpha** —
-eight demonstrated on synthetic data with deliberately planted structure (including a
-forward-looking one that trades the *behavior of other AI trading agents*), then **five
-on real market data**: large-cap prices, multi-asset ETFs, crypto venue funding, overnight
-open/close gaps, and a factor-mining panel — plus a layer that **combines the synthetic
-alphas into one risk-managed portfolio**.
+A self-contained research suite in **sixteen numbered modules**: eight synthetic alpha
+families with deliberately planted structure (including a forward-looking one that trades
+the *behavior of other AI trading agents*), five **real-data studies** (large-cap price
+factors, multi-asset ETF allocation, crypto funding carry, overnight open/close gaps, a
+10-coin carry stack), two **research engines** (a factor miner 因子挖掘 with
+multiple-testing discipline, and a walk-forward improvement loop with a trials ledger),
+and a portfolio layer that combines the synthetic alphas into one risk-managed book.
 
 > **Read this first — what this is and isn't.**
-> Everything here is **offline and backtest-only**. There is **no live-market feed,
-> no broker, no order routing** anywhere in this project. All price/volume/fundamental
-> data is **synthetic**, generated with known embedded structure so each strategy can
-> be shown to *recover a real signal* rather than overfit noise. The Sharpe ratios
-> below demonstrate that the *machinery works*; they are **not** a claim about
-> live-market profitability. Real data is far less generous. See
-> [Honest caveats](#honest-caveats).
+> There is **no broker and no order routing** anywhere in this project; nothing here
+> places a trade. Families **01–09** run on **synthetic** data generated with known
+> embedded structure, so each strategy can be shown to *recover a planted signal*
+> rather than overfit noise — their Sharpes demonstrate that the *machinery works*,
+> not that markets pay like that. Families **10–16** run on **real historical market
+> data** (cached one-time downloads: equity open/close panels, ETFs, crypto venue
+> funding + premium series) — their numbers are *measurements*, each stated with its
+> marking convention and its caveats in place. The only forward-looking component is
+> `13`'s pre-open paper logger, which appends scores to a CSV and trades nothing.
+> See [Honest caveats](#honest-caveats).
 
 ---
 
@@ -65,6 +69,7 @@ alpha/
 ├── 13_overnight_news/             can you trade overnight news at the open? + forward-only LLM harness
 ├── 14_factor_mining/              factor-mining engine (因子挖掘) + multiple-testing discipline
 ├── 15_improvement_loop/           walk-forward re-tuning loop with a trials ledger (runs on 11/12/13)
+├── 16_carry_stack/                breadth on the structural edge: 10-coin funding-carry book
 │
 ├── run_all.py                     master driver  →  leaderboard_all.csv
 ├── requirements.txt
@@ -540,3 +545,37 @@ shadow-A/B rule (candidates judged on *forward* data, adopted only past a paired
 New strategies join by adding an adapter + grid; LLM-proposed variants are welcome as a
 *generator*, but every proposal lands in the same ledger, pays the same bar, and never
 sees the fold it is judged on.
+
+---
+
+## "Get me a Sharpe 3+" — answered honestly (`16_carry_stack`)
+
+On real daily-marked data, sustained Sharpe ≥ 3 lives in three places: **structural
+transfer harvesting** (funding / LP fees / basis — smooth accrual paid knowingly; most
+resume "Sharpe 3+" claims are this genre), **breadth** (many independent bets — Sharpe
+scales with √(effective N); the Fundamental Law of Active Management), and **stacking**
+uncorrelated streams (`08`'s math). This family pulls the breadth lever on the structural
+edge: `12`'s funding-carry book widened to **10 Hyperliquid perps** (BTC, ETH, SOL, XRP,
+DOGE, BNB, LINK, AVAX, LTC, ATOM — declared in *a-priori liquidity order*, not
+performance-sorted), with the gate/cost settings **frozen by `15`'s loop** — nothing
+re-tuned.
+
+| 2023-05 → 2026-07, daily-marked, net | |
+|---|---:|
+| 10-coin gated stack | **Sharpe 11.4**, +13.8%/yr on notional, maxDD −0.28% |
+| Sharpe vs breadth, k = 1 → 10 | 10.7 → 11.4 — **flat** |
+| avg pairwise correlation of the streams | **+0.50** → effective breadth **1.8 of 10** |
+| worst daily mark (the Oct-2025 liquidation cascade) | **−25 bps** |
+
+The exhibit is the *failure* of the naive hope: one leverage cycle is the common factor
+across every coin's funding, so ten alt-perps on one venue buy √1.8 ≈ 1.3× a single
+coin — not √10 — and the low-funding names (ATOM −2.1%/yr, BNB +3.1%) actually *dilute*
+the return. Real breadth means different *premia* and different *venues*, not more
+tickers on the same one.
+
+So: **yes, ≥ 3 on this measure — stated with its measure.** The defensible sentence is
+*"delta-neutral funding-carry stack across 10 perps, 3.2 years of venue data: +14%/yr on
+notional net of costs, worst daily mark −25 bps, Sharpe ~11 on daily-marked accrual"* —
+never a naked "I have a Sharpe-11 strategy." Same clock warning as `03` and `12`: the
+Sharpe is a property of the smooth-accrual measure in a benign era; venue/custody risk is
+undiversified by construction and capacity is $100k-scale, not fund-scale.
