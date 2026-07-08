@@ -59,6 +59,7 @@ alpha/
 ├── 09_agentic_flow/               trade the crowded flow of homogeneous AI agents
 ├── 10_real_data/                  honesty check: 01/02/07 strategies on REAL prices (cached)
 ├── 11_tactical_allocation/        real high-Sharpe, low-drawdown multi-asset TAA (cached)
+├── 12_funding_carry/              real crypto perp funding carry — structural, delta-neutral (cached)
 │
 ├── run_all.py                     master driver  →  leaderboard_all.csv
 ├── requirements.txt
@@ -380,3 +381,51 @@ return for safety; lever it to taste and the *Sharpe/drawdown shape* is what tra
 survivor ETFs net of a flat cost, with no impact model. But unlike the equity factors, the
 edge is **structural and robust** — which is exactly why it survives where threshold-tuning
 didn't. *That* is the difference between finding alpha and fitting noise.
+
+---
+
+## Structural carry on real crypto venues (`12_funding_carry`)
+
+The same law, applied where the counterparty pays *knowingly*. Perpetual futures track
+spot via a **funding rate** exchanged between longs and shorts every hour; retail leverage
+demand is chronically long, so funding is positive most of the time. **Short 1× perp +
+long 1× spot** is delta-neutral and collects that transfer — a structural insurance
+premium for warehousing leverage demand, not a forecast. Nobody is out-predicted (the
+sibling of `06`'s carry/variance premium — on **real venue data**).
+
+Data: **Hyperliquid** hourly funding *and premium*, May 2023 → Jul 2026 (~3.2 yr, BTC/ETH/
+SOL) + **Kraken Futures** hourly funding (~1 yr) — free public endpoints, one-time fetch
+cached to `data_cache/`. (Ops reality is part of the trade: Binance & Bybit are US-geo-
+blocked and OKX's public history is capped at ~3 months — this is *why* funding desks run
+VPSes next to their venues.)
+
+| 2023-05 → 2026-07, net of flip costs | ann. return (on notional) | max DD (daily-marked) |
+|---|---:|---:|
+| **carry_book_gated** (3 coins, 7-day gate) | **15.3%** | **−0.3%** |
+| avg funding received: BTC **14.4%**, ETH 14.5%, SOL 12.5% | *(87 / 87 / 73% of days positive)* | |
+
+Three honesty devices are built in, in the suite's usual style:
+
+- **The smoothing illusion** — `carry_btc_ACCRUAL_ILLUSION` (funding accrual only,
+  Sharpe 13.8) ships beside the properly **daily-marked** `carry_btc` (funding − Δbasis
+  via the venue's own premium series, Sharpe 11.0). Same trade, same mean — the gap is
+  thrown-away vol. Never score carry unmarked.
+- **Read the Sharpe like `03`'s** — it's a category artifact of the clock/measure. Basis
+  wiggle is bps while the yield is steady, so Sharpe prints huge; the risks that actually
+  kill carry books — venue/custody failure, liquidation gaps, basis blowout at exit —
+  live **outside** a daily series. The worst daily mark across 3.2 years is **−14 bps**,
+  *including the Oct-2025 liquidation cascade* — that smallness is the warning, not the
+  comfort. The honest summary is **~15%/yr structural yield + an unmeasured operational
+  tail**. Size to the tail, not the vol.
+- **A real negative result** — the cross-venue spread (`xvenue_*`, HL vs Kraken funding
+  differential, both legs perps) is reported as the accrual-only **upper bound** and it
+  *still loses* 1–4%/yr net of 20 bps flips on the 1-yr overlap: the differential
+  mean-reverts faster than a trailing-sign rule catches. Venue desync is real; harvesting
+  it needs faster hands than a daily loop.
+
+Carry is **regime beta**: the equity curve compounds steadily through 2024 and visibly
+flattens through the compressed-funding 2025-26 tape, and the 7-day gate is what keeps
+the book out of the negative-funding stretches (SOL gated Sharpe 8.2 vs 6.0 always-on).
+Robust across the gate/cost grid (9.7–11.9 Sharpe for 3/7/14-day gates × 10/25 bps).
+Unlevered, on-notional; spot custody/borrow and margin drag excluded; HL/Kraken perps
+aren't US-retail venues (the US-legal cousin is the CME basis trade).
