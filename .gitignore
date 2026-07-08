@@ -28,3 +28,6 @@ data_cache/
 
 # Sports-betting research: bulk club-match download (re-fetched by pull scripts)
 sports betting/data/hist/
+
+# Live paper-trading log (forward evidence, machine-appended)
+13_overnight_news/paper_log.csv

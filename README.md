@@ -1,9 +1,11 @@
 # Alpha — a backtest suite of quant trading strategies
 
-A self-contained research suite that implements **eight families of trading alpha** —
-including a forward-looking one that trades the *behavior of other AI trading agents* —
-backtests each on synthetic data with deliberately planted structure, and then
-**combines them into one risk-managed portfolio**.
+A self-contained research suite that implements **thirteen families of trading alpha** —
+eight demonstrated on synthetic data with deliberately planted structure (including a
+forward-looking one that trades the *behavior of other AI trading agents*), then **five
+on real market data**: large-cap prices, multi-asset ETFs, crypto venue funding, overnight
+open/close gaps, and a factor-mining panel — plus a layer that **combines the synthetic
+alphas into one risk-managed portfolio**.
 
 > **Read this first — what this is and isn't.**
 > Everything here is **offline and backtest-only**. There is **no live-market feed,
@@ -60,6 +62,8 @@ alpha/
 ├── 10_real_data/                  honesty check: 01/02/07 strategies on REAL prices (cached)
 ├── 11_tactical_allocation/        real high-Sharpe, low-drawdown multi-asset TAA (cached)
 ├── 12_funding_carry/              real crypto perp funding carry — structural, delta-neutral (cached)
+├── 13_overnight_news/             can you trade overnight news at the open? + forward-only LLM harness
+├── 14_factor_mining/              factor-mining engine (因子挖掘) + multiple-testing discipline
 │
 ├── run_all.py                     master driver  →  leaderboard_all.csv
 ├── requirements.txt
@@ -429,3 +433,78 @@ the book out of the negative-funding stretches (SOL gated Sharpe 8.2 vs 6.0 alwa
 Robust across the gate/cost grid (9.7–11.9 Sharpe for 3/7/14-day gates × 10/25 bps).
 Unlevered, on-notional; spot custody/borrow and margin drag excluded; HL/Kraken perps
 aren't US-retail venues (the US-legal cousin is the CME basis trade).
+
+---
+
+## Overnight news at the open — and why the LLM half runs forward-only (`13_overnight_news`)
+
+The tempting strategy: *RAG the headlines published while the market was closed; at the
+open, buy the good-news names and short the bad-news ones.* Before pointing an LLM at it,
+two things had to be done honestly:
+
+**1. No LLM appears in the backtest — on purpose.** Backtesting an LLM on *historical*
+news is the suite's look-ahead trap in its most seductive form: every modern model was
+trained on text written **after** those nights — it already "knows" which earnings beat
+and which CEO resigned in disgrace. The leak lives **inside the weights**, where no
+purged CV can reach it. Any 2015-2024 "LLM news backtest" you see is contaminated by
+construction.
+
+**2. So the backtest tests the *mechanical core* on real adjusted open/close (2010-2024,
+same 62 mega-caps):** the overnight gap `open_t/close_{t-1}−1` *is* the market's own
+summary of the night's news, and it prices the slot an LLM would have to beat.
+
+| finding (real data, 2010-2024) | number |
+|---|---|
+| the equity premium accrues **overnight** (Asness's night effect, reproduced) | overnight-only **+9.1%/yr, Sharpe 0.85** vs intraday-only +5.0%, 0.46 |
+| "buy the gap at the open" (continuation, gross) | **Sharpe −1.49** — gaps *revert* |
+| so the **fade** is the real gross edge | **+1.49 gross, +25%/yr** — family `09`'s salience-fade, on real data |
+| …and a daily open→close flip costs | ~20 bps/day ≈ **50%/yr** — more than the whole gross edge |
+
+Every net-of-cost variant (continuation, fade, big-gap-only, 5-day hold) is **negative**
+in mega-caps: the over-reaction is real, but the *frequency is unaffordable* at retail
+costs, in the sharpest-crowd universe there is. The edge-law reading: an LLM only earns
+its keep here if it can say **which** gaps under- vs over-react — that marginal skill,
+after ~20 bps/day, is the bar.
+
+**The honest LLM half: `live_harness.py`** — a forward-only pre-open paper trader.
+`--score` pulls each name's overnight headlines and logs frozen pre-open scores
+(pluggable scorer: a crude embedded finance lexicon as the free floor, or `claude -p`
+as the actual RAG); `--settle` later fills in realized open→close returns and prints
+the running **forward IC**. Zero look-ahead by construction; the rule printed at the
+bottom is the rule: *no real money until the forward IC is positive with n in the
+hundreds.*
+
+---
+
+## A factor-mining engine, with the discipline that makes it honest (`14_factor_mining`)
+
+What "alpha factories" (WorldQuant's Alpha101 genre) actually run: generate thousands of
+candidate **expressions** over price/volume panels, score each by **daily cross-sectional
+rank-IC** against next-day returns, keep survivors. The engine is the easy part —
+`14_factor_mining` builds it (random expressions over `ts_mean/ts_std/ts_delta/ts_corr`
+of returns, price, volume, dollar-volume, illiquidity; train 2010-2017, test 2018-2024,
+real 62-name panel). The part that separates shops from noise-miners is **multiple-testing
+discipline**, and the run prints it as a single exhibit:
+
+| the mirage, quantified (205 unique mined candidates) | |
+|---|---:|
+| "significant" on train by the naive |t|>2 bar | **39** |
+| expected **max** |t| from pure noise, √(2 ln N) | **3.26** |
+| Bonferroni bar (p=0.05/205) | 3.89 |
+| train-significant that stay significant OOS | **4** |
+| the #1 pick, `ts_delta(illiq,63)`: train t **−4.2** (beats even Bonferroni) → OOS t | **−0.2**, book Sharpe **−3.0** |
+
+Mine 205 strategies and the best one *looks* like a discovery **by construction** — the
+scatter (`equity.png`) shows the whole cloud. The **classics (经典因子)** run through the
+*same* evaluator as the mined noise: momentum 12-1 (动量) is the only one whose IC
+survives OOS (t +2.4 — a century of literature showing up in 62 names), 1-month reversal
+(反转), low-vol (低波), Amihud illiquidity and turnover all die — **and even momentum's
+quintile book loses net of costs** (−0.05 Sharpe). Surviving the t-test is necessary,
+not sufficient: **IC ≠ money** — after the statistics come costs, capacity, and crowding.
+
+Honest caveats: 62 mega-caps is a breadth-starved panel (real miners use thousands of
+names — IC value scales with √breadth); the candidates share windows/terms, so the
+independent-trials noise bar *understates* the real haircut; and the pool-level
+train/test t correlation (+0.37) means the *family* of illiquidity/return-delta signals
+shares weak structure — which is exactly how mining should be read: evidence about
+*pools*, never about the lucky top pick.
