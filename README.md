@@ -64,6 +64,7 @@ alpha/
 ├── 12_funding_carry/              real crypto perp funding carry — structural, delta-neutral (cached)
 ├── 13_overnight_news/             can you trade overnight news at the open? + forward-only LLM harness
 ├── 14_factor_mining/              factor-mining engine (因子挖掘) + multiple-testing discipline
+├── 15_improvement_loop/           walk-forward re-tuning loop with a trials ledger (runs on 11/12/13)
 │
 ├── run_all.py                     master driver  →  leaderboard_all.csv
 ├── requirements.txt
@@ -508,3 +509,34 @@ independent-trials noise bar *understates* the real haircut; and the pool-level
 train/test t correlation (+0.37) means the *family* of illiquidity/return-delta signals
 shares weak structure — which is exactly how mining should be read: evidence about
 *pools*, never about the lucky top pick.
+
+---
+
+## The improvement loop, with a trials ledger (`15_improvement_loop`)
+
+"Loop over the strategies: backtest, tweak, keep what's better, repeat" — run that
+naively and it **always reports progress**, because each iteration is one more draw from
+the noise distribution and the loop keeps the best draw. An improvement loop without
+multiple-testing discipline is `14`'s mining mirage pointed at your own book.
+
+`15` is the disciplined version, run on the real-data families (11 / 12 / 13):
+**walk-forward selection** (each fold, pick the variant with the best Sharpe on data
+strictly *before* the fold — what a re-tuning loop would actually have earned), a
+**paired t-test against the a-priori default** with an adoption bar that rises with the
+number of variants tried (`t > max(2, √(2 ln N))` — every trial is counted and paid for),
+the **snooped full-sample max** printed alongside (the gap to walk-forward is the
+overfitting tax), and a **pick-stability readout** (plateaus re-pick the same region;
+noise surfaces jump).
+
+| family (variants) | default | wf-tuned | paired t (bar) | verdict |
+|---|---:|---:|---:|---|
+| 11 TAA (9) | 1.00 | 0.98 | −1.04 (2.10) | **REJECT** — plateau, tuner chased wobbles |
+| 12 funding carry (6) | 11.58 | 11.72 | +1.67 (2.00) | **REJECT** — "better" number, below the bar |
+| 13 overnight fade (4) | −1.26 | −0.75 | +1.27 (2.00) | **REJECT** — can't tune a dead strategy alive |
+
+Three REJECTs is the loop **working**: it is the certificate that the shipped defaults
+sit on robust plateaus rather than cherry-picks — the offline sibling of a live
+shadow-A/B rule (candidates judged on *forward* data, adopted only past a paired-t bar).
+New strategies join by adding an adapter + grid; LLM-proposed variants are welcome as a
+*generator*, but every proposal lands in the same ledger, pays the same bar, and never
+sees the fold it is judged on.
